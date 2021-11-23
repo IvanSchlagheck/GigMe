@@ -1,3 +1,14 @@
 <h1>Venues#show</h1>
-<p>Find me in app/views/venues/show.html.erb</p>
-<p>Here we will show ONE venue. 😀</p>
+<div>
+    <%= @venue.name %>
+    <img src= "<%= @venue.image_url %>"> 
+    <%= @venue.address %>
+    <%= @venue.contact_details %>
+</div>
+<% @venue.events.each do |event| %>
+  <div>
+    <%= event.starts_at %>
+    <%= event.ends_at %>
+  </div>
+  
+<% end %>
