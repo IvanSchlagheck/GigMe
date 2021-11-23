@@ -228,33 +228,78 @@ puts "Created #{venue16.name}"
 
 puts "Creating venues finished!"
 
-# Creating Events seeds
+# Creating EVENT seeds
 
 puts 'Creating events...'
 
-event1 = Event.create(
+event1 = Event.new(
   starts_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
   ends_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
   venue_id: 1
 )
+event1.save!
+puts "Created event1"
 
-event2 = Event.create(
+event2 = Event.new(
   starts_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
   ends_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
   venue_id: 1
 )
+event2.save!
+puts "Created event2"
 
-event3 = Event.create(
+event3 = Event.new(
   starts_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
   ends_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
   venue_id: 1
 )
+event3.save!
+puts "Created event3"
 
-event4 = Event.create(
+event4 = Event.new(
   starts_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
   ends_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
   venue_id: 1
 )
+event4.save!
+puts "Created event4"
 
-puts "Created #{event4}"
-puts "Created events"
+puts "Creating events finished!"
+
+# Creating BOOKING seeds
+
+puts 'Creating bookings...'
+
+booking1 = Booking.new(
+  status: 0,
+  user_id: 2,
+  event_id: 1
+)
+booking1.save!
+puts "Created booking1"
+
+booking2 = Booking.new(
+  status: 1,
+  user_id: 2,
+  event_id: 2
+)
+booking1.save!
+puts "Created booking2"
+
+booking3 = Booking.new(
+  status: 2,
+  user_id: 2,
+  event_id: 3
+)
+booking1.save!
+puts "Created booking3"
+
+booking4 = Booking.new(
+  status: 3,
+  user_id: 2,
+  event_id: 4
+)
+booking1.save!
+puts "Created booking4"
+
+puts "Creating bookings finished!"
