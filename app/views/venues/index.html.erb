@@ -3,8 +3,9 @@
   <p>Find me in app/views/venues/index.html.erb</p>
   <p>Here we will show all the venues. 😀</p>
 
-  <div class="container d-flex flex-wrap">
-    <% @venues.each do |venue| %>
+<div class="container d-flex flex-wrap">
+  <% @venues.each do |venue| %>
+    <%= link_to venue_path(venue) do %>
       <div class="card d-flex m-2">
         <img src="<%= venue.image_url %>" alt="random-pic">
         <h2><%= venue.name %></h2>
@@ -12,5 +13,6 @@
         <p><%= venue.contact_details %></p>
       </div>
     <% end %>
+  <% end %>
   </div>
 </div>
