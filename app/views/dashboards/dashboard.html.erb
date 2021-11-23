@@ -1,0 +1,5 @@
+<% if current_user.status == 'host' %>
+  <%= render 'dashboard_host' %>
+<% else %>
+  <%= render 'dashboard_artist' %>
+<% end %>
