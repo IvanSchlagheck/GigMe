@@ -15,7 +15,7 @@ marc = User.new(
   first_name: 'Marc',
   last_name: 'Rodenbusch',
   phone_number: '015736589485',
-  status: "artist"
+  status: "host"
 )
 marc.save!
 puts "created user #{marc.username}"
