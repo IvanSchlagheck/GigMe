@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+# Creating USER seeds
+
 puts 'Creating users...'
 
 marc = User.new(
@@ -57,3 +60,10 @@ amelie.save!
 puts "created user #{amelie.username}"
 
 puts "Creating user finished!"
+
+
+# Creating VENUE seeds
+
+puts 'Creating venues...'
+
+puts "Creating venues finished!"
