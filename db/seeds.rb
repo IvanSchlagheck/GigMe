@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+require 'faker'
 
 # Creating USER seeds
 
@@ -227,3 +227,34 @@ venue16.save!
 puts "Created #{venue16.name}"
 
 puts "Creating venues finished!"
+
+# Creating Events seeds
+
+puts 'Creating events...'
+
+event1 = Event.create(
+  starts_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
+  ends_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
+  venue_id: 1
+)
+
+event2 = Event.create(
+  starts_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
+  ends_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
+  venue_id: 1
+)
+
+event3 = Event.create(
+  starts_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
+  ends_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
+  venue_id: 1
+)
+
+event4 = Event.create(
+  starts_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
+  ends_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
+  venue_id: 1
+)
+
+puts "Created #{event4}"
+puts "Created events"
