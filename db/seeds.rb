@@ -283,7 +283,7 @@ booking2 = Booking.new(
   user_id: 2,
   event_id: 2
 )
-booking1.save!
+booking2.save!
 puts "Created booking2"
 
 booking3 = Booking.new(
@@ -291,7 +291,7 @@ booking3 = Booking.new(
   user_id: 2,
   event_id: 3
 )
-booking1.save!
+booking3.save!
 puts "Created booking3"
 
 booking4 = Booking.new(
@@ -299,7 +299,7 @@ booking4 = Booking.new(
   user_id: 2,
   event_id: 4
 )
-booking1.save!
+booking4.save!
 puts "Created booking4"
 
 puts "Creating bookings finished!"
