@@ -1,0 +1,6 @@
+<div class="container">
+  <h1>We have <%= @users.size %> contributors registered. Let's rock! 🤘</h1>
+  <% @users.each do |user| %>
+    <h2><%= user.username %></h2>
+  <% end %>
+</div>
