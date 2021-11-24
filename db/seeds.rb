@@ -18,7 +18,8 @@ marc = User.new(
   first_name: 'Marc',
   last_name: 'Rodenbusch',
   phone_number: '015736589485',
-  status: "host"
+  status: "host",
+  image_url: "../app/assets/images/users/marc.jpg"
 )
 marc.save!
 puts "created user #{marc.username}"
