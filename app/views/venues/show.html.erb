@@ -1,0 +1,16 @@
+<div class="container">
+  <h1><%= @venue.name %></h1>
+  <div>
+      <img src= "<%= @venue.image_url %>">
+      <p><%= @venue.address %></p>
+      <p><%= @venue.contact_details %></p>
+  </div>
+  <% @venue.events.each do |event| %>
+    <%= link_to venue_path(@venue) do %>
+      <div class="btn btn-danger">
+        <%= event.starts_at %>
+        <%= event.ends_at %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
