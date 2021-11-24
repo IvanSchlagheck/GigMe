@@ -6,7 +6,6 @@
     <% @bookings.pending.each do |booking| %>
       <div class="card">
         <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
-        <img src="" alt="">
         <p><%= booking.user.username %></p>
         <p><%= booking.status %></p>
       </div>

@@ -19,7 +19,7 @@ marc = User.new(
   last_name: 'Rodenbusch',
   phone_number: '015736589485',
   status: "host",
-  image_url: "../app/assets/images/users/marc.jpg"
+  image_url: ".../assets/images/users/marc.jpg"
 )
 marc.save!
 puts "created user #{marc.username}"
@@ -31,7 +31,8 @@ ivan = User.new(
   first_name: 'Ivan',
   last_name: 'Schlagheck',
   phone_number: '0123456789',
-  status: "artist"
+  status: "artist",
+  image_url: ".../assets/images/users/marc.jpg"
 )
 ivan.save!
 puts "created user #{ivan.username}"
@@ -43,7 +44,8 @@ damian = User.new(
   first_name: 'Damian',
   last_name: 'Beissel',
   phone_number: '01791317541',
-  status: "artist"
+  status: "artist",
+  image_url: ".../assets/images/users/marc.jpg"
 )
 damian.save!
 puts "created user #{damian.username}"
@@ -55,7 +57,8 @@ amelie = User.new(
   first_name: 'Amelie',
   last_name: "D'arenberg",
   phone_number: '0123456789',
-  status: "artist"
+  status: "artist",
+  image_url: ".../assets/images/users/marc.jpg"
 )
 amelie.save!
 puts "created user #{amelie.username}"
