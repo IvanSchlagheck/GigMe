@@ -3,9 +3,9 @@
 <h1>Artist Dashboard</h1>
 
 
-  <% if @host_bookings.pending.size != 0 %>
+  <% if @bookings.pending.size != 0 %>
     <h3>Pending bookings</h3>
-    <% @host_bookings.pending.each do |booking| %>
+    <% @bookings.pending.each do |booking| %>
       <div class="card">
         <p><%= booking.event.venue.name %></p>
         <p><%= booking.event.venue.address %></p>
@@ -15,9 +15,9 @@
     <% end %>
   <% end %>
 
-  <% if @host_bookings.confirmed.size != 0 %>
+  <% if @bookings.confirmed.size != 0 %>
     <h3>Confirmed bookings</h3>
-    <% @host_bookings.confirmed.each do |booking| %>
+    <% @bookings.confirmed.each do |booking| %>
       <div class="card">
         <p><%= booking.event.venue.name %></p>
         <p><%= booking.event.venue.address %></p>
@@ -27,9 +27,9 @@
     <% end %>
   <% end %>
 
-  <% if @host_bookings.rejected.size != 0 %>
+  <% if @bookings.rejected.size != 0 %>
     <h3>Rejected bookings</h3>
-    <% @host_bookings.rejected.each do |booking| %>
+    <% @bookings.rejected.each do |booking| %>
       <div class="card">
         <p><%= booking.event.venue.name %></p>
         <p><%= booking.event.venue.address %></p>
@@ -39,9 +39,9 @@
     <% end %>
   <% end %>
 
-  <% if @host_bookings.past.size != 0 %>
+  <% if @bookings.past.size != 0 %>
     <h3>Past bookings</h3>
-    <% @host_bookings.past.each do |booking| %>
+    <% @bookings.past.each do |booking| %>
       <div class="card">
         <p><%= booking.event.venue.name %></p>
         <p><%= booking.event.venue.address %></p>
@@ -51,9 +51,9 @@
     <% end %>
   <% end %>
 
-  <% if @host_bookings.messaging.size != 0 %>
+  <% if @bookings.messaging.size != 0 %>
     <h3>Messaging bookings</h3>
-    <% @host_bookings.messaging.each do |booking| %>
+    <% @bookings.messaging.each do |booking| %>
       <div class="card">
         <p><%= booking.event.venue.name %></p>
         <p><%= booking.event.venue.address %></p>
