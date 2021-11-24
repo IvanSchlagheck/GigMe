@@ -5,12 +5,43 @@
       <p><%= @venue.address %></p>
       <p><%= @venue.contact_details %></p>
   </div>
-  <% @venue.events.each do |event| %>
-    <%= link_to venue_path(@venue) do %>
-      <div class="btn btn-danger">
-        <%= event.starts_at %>
-        <%= event.ends_at %>
+  <% @venue.events.each_with_index do |event, ind| %>
+
+    <button class="event-modal-button" data-buttonId="<%= ind %>">
+      button text here
+    </button>
+
+    <div class="event-modal" id="event-modal-<%= ind %>">
+      <div class="event-modal-content">
+        modal content here
+
+
+
+
+
+        <span class="event-modal-close" id="event-modal-close-<%= ind %>">&times;</span>
       </div>
-    <% end %>
+    </div>
+
   <% end %>
 </div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const btn = document.querySelectorAll(".event-modal-button");
+    const close = document.querySelectorAll(".event-modal-close");
+
+    btn.forEach(button => {
+      const modal = document.getElementById(`event-modal-${button.dataset.buttonid}`)
+      const closeButton = document.getElementById(`event-modal-close-${button.dataset.buttonid}`)
+      
+      button.onclick = function(event) {
+        modal.style.display = "block";
+      }
+      
+      closeButton.onclick = function(event) {
+        modal.style.display = "none";
+      }
+    })
+  });
+</script>
