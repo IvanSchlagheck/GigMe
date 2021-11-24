@@ -1,7 +1,30 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
-    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1579125305607-15279d30d370?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);">
+<div class="d-flex justify-content-end my-1">
+<%= link_to "Sign up", new_user_registration_path, class: "signuplogin" %>
+<%= link_to "Login", new_user_session_path, class: "signuplogin" %>
+</div>
+  <div class="container my-5">
+    <h1>Gigme</h1>
+    <h2>Life is short. Gig more!</h2>
+<div>
+<form action="" method="get">
+  <div class="product-search">
+      <div class="search-element">
+        <label class="search-label">Choose a date:</label>
+        <input class="search-input" type="text" autocomplete="on" name="query">
+      </div>
+      <div class="search-element">
+        <label class="search-label">Select a city area</label>
+        <input class="search-input" type="text" class="" autocomplete="on" name="location">
+      </div>
+      <div class="search-element">
+        <label class="search-label">-Km</label>
+        <input class="search-input" type="text" class="" autocomplete="on" name="location">
+      </div>
+      <a type="submit" class="search-button">Gigme!</a>
+  </div>
+</form></div>
+<p>There are 213 venues near you</p>
+
   </div>
 </div>
