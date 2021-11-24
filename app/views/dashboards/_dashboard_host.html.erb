@@ -1,10 +1,62 @@
 <div class="container">
-<h1>Host Dashoboard</h1>
+  <h1>Host Dashoboard</h1>
 
-<% @events.each do |event| %>
-  <% booking = @bookings.where(event: event) %>
-  <%= booking %>
-<% end %>
+  <% if @bookings.pending.size != 0 %>
+    <h3>Pending bookings</h3>
+    <% @bookings.pending.each do |booking| %>
+      <div class="card">
+        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
+        <p><%= booking.user.username %></p>
+        <p><%= booking.status %></p>
+      </div>
+    <% end %>
+  <% end %>
+
+  <% if @bookings.confirmed.size != 0 %>
+    <h3>Confirmed bookings</h3>
+    <% @bookings.confirmed.each do |booking| %>
+      <div class="card">
+        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
+        <p><%= booking.user.username %></p>
+        <p><%= booking.status %></p>
+      </div>
+    <% end %>
+  <% end %>
+
+  <% if @bookings.rejected.size != 0 %>
+    <h3>Rejected bookings</h3>
+    <% @bookings.rejected.each do |booking| %>
+      <div class="card">
+        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
+        <p><%= booking.user.username %></p>
+        <p><%= booking.status %></p>
+      </div>
+    <% end %>
+  <% end %>
+
+  <% if @bookings.past.size != 0 %>
+    <h3>Past bookings</h3>
+    <% @bookings.past.each do |booking| %>
+      <div class="card">
+        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
+        <p><%= booking.user.username %></p>
+        <p><%= booking.status %></p>
+      </div>
+    <% end %>
+  <% end %>
+
+  <% if @bookings.messaging.size != 0 %>
+    <h3>Messaging bookings</h3>
+    <% @bookings.messaging.each do |booking| %>
+      <div class="card">
+        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
+        <p><%= booking.user.username %></p>
+        <p><%= booking.status %></p>
+      </div>
+    <% end %>
+  <% end %>
+
+
 
 
 
