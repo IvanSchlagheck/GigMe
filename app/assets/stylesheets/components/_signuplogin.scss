@@ -3,12 +3,16 @@
   margin-right: 30px;
   color: white;
   object-position: 80% 100%;
-  position: absolute;
-width: 451px;
-height: 29.07px;
-left: 990px;
-top: 31px;
-
+  position: relative;
+    left: 60%;
+    top: 2%;
+  margin-top: 0%;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  display: flex;
 }
 
 .signuplogin:hover {
