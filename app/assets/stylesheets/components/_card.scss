@@ -1,0 +1,48 @@
+.card-full {
+  width: 319px;
+  height: 351px;
+  position: relative;
+}
+
+.card-top {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 20px 20px 0px 0px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 46.44%;
+}
+
+.card-bottom {
+  background: linear-gradient(105.53deg, rgba(255, 255, 255, 0.15) 3.56%, rgba(37, 206, 209, 0.15) 104.41%);
+  border-radius: 0px 0px 20px 20px;
+  height: 171px;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 51.28%;
+  bottom: 0%;
+  a{
+    color: white;
+  }
+  p {
+    font-family: $inter;
+    letter-spacing: -0.05em;
+    
+  }
+  h2 {
+    font-family: $inter;
+    letter-spacing: -0.05em;
+  }
+}
