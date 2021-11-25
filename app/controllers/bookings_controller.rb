@@ -10,10 +10,17 @@ class BookingsController < ApplicationController
     @message.user = current_user
     if @booking.save
       @message.booking_id = @booking.id
-      @message.save!
-      redirect_to root_path
+      @message.save
+      redirect_to booking_path(@booking)
     else
       redirect_to show_path(@venue_id)
+    end
+
+    def index
+    end
+
+    def show
+      @booking = Booking.find(params[:id])
     end
   end
 

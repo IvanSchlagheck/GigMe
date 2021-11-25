@@ -1,0 +1,11 @@
+
+<div class="card-venue-name" style="background-color:grey;">
+<h1>Your Booking</h1>
+<%= @booking.event.starts_at %>
+<%= @booking.event.ends_at %>
+</div>
+<div class="card-venue-address" style="background-color:grey;">
+<% @booking.messages.each do |message| %>
+    <%= message.content %>
+<% end %>
+</div>
