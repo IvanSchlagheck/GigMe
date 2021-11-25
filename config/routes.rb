@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :venues, only: [ :index, :show ]
   resources :users, only: [ :index, :show ]
-  resources :bookings, only: [ :create ]
+  resources :bookings, only: [ :create, :show ]
 end
