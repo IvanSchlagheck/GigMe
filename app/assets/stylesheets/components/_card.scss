@@ -36,13 +36,55 @@
   a{
     color: white;
   }
-  p {
-    font-family: $inter;
-    letter-spacing: -0.05em;
-    
-  }
+}
+
+.card-venue-name {
+  position: absolute;
+  left: 4%;
+  top: 9.96%;
+  bottom: 25.93%;
   h2 {
     font-family: $inter;
     letter-spacing: -0.05em;
+    font-size: 30px;
   }
+}
+
+.card-venue-address {
+  position: absolute;
+  left: 22.1%;
+  top: 65.06%;
+  bottom: 11.68%;
+  p {
+    font-family: $inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: -0.05em;
+  }
+}
+
+.card-pink-line {
+  background-color: $pink;
+  position: absolute;
+  left: 0%;
+  right: 41.42%;
+  top: 22.95%;
+  bottom: 26.21%;
+  width: 186.88px;
+  height: 17.02px;
+  z-index: -1;
+}
+
+.card-green-line {
+position: absolute;
+left: 22.4%;
+right: 0.18%;
+top: 75.47%;
+bottom: 9.68%;
+background-color: $green;
+height: 17.02px;
+width: 246,96px;
+z-index: -1;
 }

@@ -2,9 +2,13 @@
   <div class="card-top" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= venue.image_url %>;)">
   </div>
   <div class="card-bottom">
-    <h2><%= venue.name %></h2>
-    <div class="pink-line"></div>
-    <p><%= venue.address %></p>
-    <div class="green-line"></div>
+    <div class="card-venue-name">
+      <h2><%= venue.name %></h2>
+    </div>
+    <div class="card-pink-line"></div>
+    <div class="card-venue-address">
+      <p><%= venue.address %></p>
+    </div>
+    <div class="card-green-line"></div>
   </div>
 </div>

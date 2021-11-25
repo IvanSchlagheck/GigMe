@@ -7,29 +7,7 @@
   <div class="container my-5">
     <h1>Gigme</h1>
     <h2>Life is short. Gig more!</h2>
-    <div>
-      <form action="" method="get">
-      <div class="product-search">
-        <div class="search-element">
-          <label class="search-label">Choose a date:</label>
-          <input class="search-input" type="text" autocomplete="on" name="query">
-         <style>
-    </style>
-        </div>
-        <div class="search-element">
-          <label class="search-label">Select a city area</label>
-          <input class="search-input" type="text" class="" autocomplete="on" name="location">
-        </div>
-        <div class="search-element">
-          <label class="search-label">-Km</label>
-          <input class="search-input" type="text" class="" autocomplete="on" name="location">
-        </div>
-      <div>
-        <%= link_to 'GigMe!', users_path, class: "search-button"%>
-      </div>
-  </div>
-</form>
-</div>
-<p>There are 213 venues near you</p>
+    <%= render "shared/searchbar" %>
+    <p>There are 213 venues near you</p>
   </div>
 </div>
