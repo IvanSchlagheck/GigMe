@@ -4,8 +4,20 @@
 <%= @booking.event.starts_at %>
 <%= @booking.event.ends_at %>
 </div>
-<div class="card-venue-address" style="background-color:grey;">
-<% @booking.messages.each do |message| %>
-    <%= message.content %>
-<% end %>
+<div class="messages">
+  <div class="card-venue-address" style="background-color:grey;">
+    <% @booking.messages.each do |message| %>
+      <div id="message-<%= message.id %>">
+          <small>
+            <strong><%= message.user.username %></strong>
+            <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
+          </small>
+            <p><%= message.content %></p>
+      </div>
+    <% end %>
+    <%= simple_form_for [@booking, @message], remote: true do |f| %>
+      <%= f.input :content, label: false, placeholder: "#Your Message#" %>
+      <%= f.submit "send" %>
+    <% end %>
+  </div>
 </div>

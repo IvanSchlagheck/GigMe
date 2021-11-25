@@ -2,6 +2,14 @@ class BookingsController < ApplicationController
   def new
   end
 
+  def index
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+    @message = Message.new
+  end
+
   def create
     @booking = Booking.new
     @message = Message.new(booking_params)
@@ -14,13 +22,6 @@ class BookingsController < ApplicationController
       redirect_to booking_path(@booking)
     else
       redirect_to show_path(@venue_id)
-    end
-
-    def index
-    end
-
-    def show
-      @booking = Booking.find(params[:id])
     end
   end
 
