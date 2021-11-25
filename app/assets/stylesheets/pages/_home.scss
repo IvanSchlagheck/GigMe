@@ -4,13 +4,20 @@
 }
 
 .textaboutgiggers {
-  font-family: 'Inter', sans-serif;
-  margin-left: 100px;
+  z-index: 10;
+  position: relative;
+  width: 100%;
+  margin-left: 0;
+}
+
+.textaboutgiggers h1 {
+font-family: 'Inter', sans-serif;
+  margin-left: 30px;
   color: white;
   padding: 10%;
   font-weight: bold;
   font-size: 76px;
-  line-height: 92px;
+
   letter-spacing: -0.05em;
 }
 
@@ -28,4 +35,42 @@
 
 .container {
   padding: 2px 16px;
+}
+
+.card-pink-line-home1 {
+  background-color: $pink;
+  position: absolute;
+  left: 0%;
+  right: 41.42%;
+  top: 40%;
+  bottom: 26.21%;
+  width: 390px;
+  height: 17.02px;
+  z-index: -1;
+
+}
+
+.card-pink-line-home2 {
+  background-color: $pink;
+  position: absolute;
+  left: 0%;
+  right: 90%;
+  top: 72%;
+  bottom: 26.21%;
+  width: 440px;
+  height: 17.02px;
+  z-index: -1;
+}
+
+.card-green-line-home {
+  background-color: $green;
+  position: absolute;
+  left: 0%;
+  right: 41.42%;
+  top: 56%;
+  bottom: 26.21%;
+  width: 100%;
+  height: 17.02px;
+  z-index: -1;
+  margin-left: 140px;
 }
