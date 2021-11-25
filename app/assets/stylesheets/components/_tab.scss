@@ -1,0 +1,134 @@
+.images-tab {
+  h4 {
+    color: white;
+    font-family: $inter;
+    font-size: 45px;
+    letter-spacing: -0.05em;
+    transform: translate(27%, 278%);
+    position: relative;
+    z-index: 1;
+  }
+
+  .tab-green-line {
+    width: 77%;
+    height: 22px;
+    background-color: $green;
+    transform: translate(-48%, 504%);
+    z-index: -1;
+  }
+
+  .arrow-down-pink {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid $pink;
+    transform: translate(637%, 576%);
+    position: relative;
+    z-index: 1;
+  }
+
+  .arrow-down-green {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid $pink;
+    transform: translate(637%, 576%);
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.about-tab {
+  h4 {
+    color: white;
+    font-family: $inter;
+    font-size: 45px;
+    letter-spacing: -0.05em;
+    transform: translate(59%, 92%);
+    position: relative;
+    z-index: 1;
+  }
+
+  .tab-green-line {
+    width: 77%;
+    height: 22px;
+    background-color: $green;
+    transform: translate(76%, 32%);
+    z-index: -1;
+  }
+
+  .arrow-down-pink {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid $pink;
+    transform: translate(1952%, 52%);
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.reviews-tab {
+  h4 {
+    color: white;
+    font-family: $inter;
+    font-size: 45px;
+    letter-spacing: -0.05em;
+    transform: translate(59%, 92%);
+    position: relative;
+    z-index: 1;
+  }
+
+  .tab-pink-line {
+    width: 77%;
+    height: 22px;
+    background-color: $pink;
+    transform: translate(76%, 32%);
+    z-index: -1;
+  }
+
+  .arrow-down-green {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid $green;
+    transform: translate(2057%, 61%);
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.requirements-tab {
+  h4 {
+    color: white;
+    font-family: $inter;
+    font-size: 45px;
+    letter-spacing: -0.05em;
+    transform: translate(59%, 92%);
+    position: relative;
+    z-index: 1;
+  }
+
+  .tab-green-line {
+    width: 77%;
+    height: 22px;
+    background-color: $green;
+    transform: translate(76%, 32%);
+    z-index: -1;
+  }
+
+  .arrow-down-pink {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid $pink;
+    transform: translate(2324%, 52%);
+    position: relative;
+    z-index: 1;
+  }
+}

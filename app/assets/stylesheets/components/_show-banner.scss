@@ -17,7 +17,7 @@
     font-weight: bold;
     line-height: 125px;
     letter-spacing: -0.05em;
-    transform: translate(-5%, 127%);
+    transform: translate(-5%, 223%);
     z-index: 1;
     position: relative;
   }
@@ -31,14 +31,14 @@
     font-size: 42px;
     line-height: 49px;
     letter-spacing: -0.05em;
-    transform: translate(-5%, 290%);
+    transform: translate(-5%, 464%);
   }
 }
 
 .banner-green-line {
-  width: 700px;
+  width: 77%;
   height: 22px;
   background-color: $green;
-  transform: translate(-32%, 504%);
+  transform: translate(-48%, 1056%);
   z-index: -1;
 }
