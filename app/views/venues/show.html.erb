@@ -1,28 +1,23 @@
+<%= render "shared/show-banner", venue: @venue %>
 <div class="container">
-  <h1><%= @venue.name %></h1>
-  <div>
-      <img src= "<%= @venue.image_url %>">
-      <p><%= @venue.address %></p>
-      <p><%= @venue.contact_details %></p>
-  </div>
   <% @venue.events.each_with_index do |event, ind| %>
 
     <button class="event-modal-button" data-buttonId="<%= ind %>">
-      button text here
+      <%= event.starts_at %> until <%= event.ends_at %>
     </button>
 
     <div class="event-modal" id="event-modal-<%= ind %>">
       <div class="event-modal-content">
         modal content here
-
-
-
-
-
+        <%= simple_form_for :booking, url: bookings_path do |f| %>
+          <%= f.hidden_field :event, value: event.id %>
+          <%= f.input :content, as: :text %>
+          <%= f.submit %>
+        <% end %>
         <span class="event-modal-close" id="event-modal-close-<%= ind %>">&times;</span>
       </div>
     </div>
-
+    <p class="notice"><%= notice %></p>
   <% end %>
 </div>
 

@@ -275,7 +275,7 @@ puts "Creating events finished!"
 puts 'Creating bookings...'
 
 booking1 = Booking.new(
-  status: 1,
+  status: 0,
   user_id: 2,
   event_id: 1
 )

@@ -1,6 +1,10 @@
 class VenuesController < ApplicationController
   def index
-    @venues = Venue.all
+    if params[:query].present?
+      @venues = Venue.where(name: params[:query])
+    else
+      @venues = Venue.all
+    end
   end
 
   def show
