@@ -1,65 +1,27 @@
 <div class="container">
   <h1>Host Dashboard</h1>
   <% if @host_bookings.pending.size != 0 %>
-    <h3>Pending bookings</h3>
+    <h3>Pending Gigs</h3>
     <% @host_bookings.pending.each do |booking| %>
       <div class="card">
-        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
         <p><%= booking.user.username %></p>
+        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
         <%= image_tag(booking.user.image_url, width: 200) %>
-        <p><%= booking.status %></p>
+        <%= link_to "Accept", booking_confirm_path(booking) %>
+        <%= link_to "Decline", dashboard_path %>
       </div>
     <% end %>
   <% end %>
 
   <% if @host_bookings.confirmed.size != 0 %>
-    <h3>Confirmed bookings</h3>
+    <h3>Upcoming Gigs</h3>
     <% @host_bookings.confirmed.each do |booking| %>
       <div class="card">
-        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
         <p><%= booking.user.username %></p>
-        <p><%= booking.status %></p>
+        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
+        <%= image_tag(booking.user.image_url, width: 200) %>
       </div>
     <% end %>
   <% end %>
-
-  <% if @host_bookings.rejected.size != 0 %>
-    <h3>Rejected bookings</h3>
-    <% @host_bookings.rejected.each do |booking| %>
-      <div class="card">
-        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
-        <p><%= booking.user.username %></p>
-        <p><%= booking.status %></p>
-      </div>
-    <% end %>
-  <% end %>
-
-  <% if @host_bookings.past.size != 0 %>
-    <h3>Past bookings</h3>
-    <% @host_bookings.past.each do |booking| %>
-      <div class="card">
-        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
-        <p><%= booking.user.username %></p>
-        <p><%= booking.status %></p>
-      </div>
-    <% end %>
-  <% end %>
-
-  <% if @host_bookings.messaging.size != 0 %>
-    <h3>Messaging bookings</h3>
-    <% @host_bookings.messaging.each do |booking| %>
-      <div class="card">
-        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
-        <p><%= booking.user.username %></p>
-        <p><%= booking.status %></p>
-      </div>
-    <% end %>
-  <% end %>
-
-
-
-
-
-
 
 </div>
