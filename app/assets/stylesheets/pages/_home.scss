@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 .grad {
-  background-image: linear-gradient(to bottom right,black, #E500A4);
+  background: linear-gradient(141.25deg, rgba(229, 0, 164, 0) 0.71%, rgba(229, 0, 164, 0.4) 60.68%), #000000;
 }
 
 .textaboutgiggers {
@@ -8,6 +8,10 @@
   margin-left: 100px;
   color: white;
   padding: 10%;
+  font-weight: bold;
+  font-size: 76px;
+  line-height: 92px;
+  letter-spacing: -0.05em;
 }
 
 .card {

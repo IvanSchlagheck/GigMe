@@ -13,11 +13,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
+  <body class= "grad">
 
     <%= render 'shared/flashes' %>
-    <%= render 'shared/banner' %>
-
     <%= yield %>
     <%= render 'shared/footer' %>
   </body>
