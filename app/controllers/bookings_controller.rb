@@ -14,6 +14,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     @message = Message.new(booking_params)
     @booking.user = current_user
+    @booking.status = 0
     @booking.event_id = params[:booking][:event]
     @message.user = current_user
     if @booking.save

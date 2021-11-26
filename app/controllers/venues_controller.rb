@@ -1,7 +1,7 @@
 class VenuesController < ApplicationController
   def index
-    if params[:query].present?
-      @venues = Venue.where(name: params[:query])
+    if params[:venue].present?
+      @venues = Venue.where("name ILIKE ?", "%#{params[:venue]}%")
     else
       @venues = Venue.all
     end

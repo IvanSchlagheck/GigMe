@@ -1,18 +1,18 @@
 <div>
-  <form action="" method="get">
+  <form action="/venues" method="get">
     <div class="product-search">
       <div class="search-element">
-        <label class="search-label">Choose a date:</label>
-        <input class="search-input" type="text" autocomplete="on" name="query">
+        <label class="search-label">Choose a venue:</label>
+        <input class="search-input" type="text" autocomplete="on" name="venue">
       </div>
-      <div class="search-element">
+      <%# <div class="search-element">
         <label class="search-label">Select a city area</label>
-        <input class="search-input" type="text" class="" autocomplete="on" name="location">
+        <input class="search-input" type="text" class="text-in-search-bar" autocomplete="on" name="location">
       </div>
       <div class="search-element">
         <label class="search-label">-Km</label>
         <input class="search-input" type="text" class="" autocomplete="on" name="location">
-      </div>
+      </div> %>
       <div>
         <%= link_to 'GigMe!', venues_path, class: "search-button"%>
       </div>
