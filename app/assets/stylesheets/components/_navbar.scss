@@ -1,19 +1,26 @@
 .navbar {
   justify-content: flex-end;
-  position: absolute;
+  margin-bottom: 50px;
   width: 100%;
   z-index: 10;
+  height: auto;
 }
 
 .signuplogin {
   margin-left: 30px;
   margin-right: 30px;
   color: white;
+  object-position: 80% 100%;
+  left: 78%;
+  right: 1.81%;
+  top: 1.29%;
+  bottom: 98.09%;
   letter-spacing: -0.05em;
+  font-weight: bold;
   font-size: 30px;
   line-height: 36px;
-  font-family: $inter;
 }
+
 
 .signuplogin:hover {
   color: white;
@@ -44,4 +51,17 @@ background-color: $green;
 height: 5px;
 width: 246,96px;
 z-index: -1;
+}
+
+.gigmelogo {
+
+  color: white;
+  letter-spacing: -0.05em;
+  font-size: 50px;
+  line-height: 36px;
+  font-family: $inter;
+}
+
+.gigmelogo:hover {
+  color: white;
 }
