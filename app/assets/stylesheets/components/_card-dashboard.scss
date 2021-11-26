@@ -23,7 +23,7 @@
   background-color: $green;
   height: 17.02px;
   width: 85%;
-  z-index: 11;
+  z-index: 1;
 }
 .card-pink-line-confirmed {
   position: absolute;
@@ -33,5 +33,73 @@
   background-color: $pink;
   height: 17.02px;
   width: 15%;
-  z-index: 11;
+  z-index: 1;
+}
+
+.card-green-line-pending {
+  position: absolute;
+  top: 60.47%;
+  left: 0%;
+  bottom: 9.68%;
+  background-color: $green;
+  height: 17.02px;
+  width: 50%;
+  z-index: 1;
+}
+.card-pink-line-pending {
+  position: absolute;
+  top: 60.47%;
+  right: 0%;
+  bottom: 9.68%;
+  background-color: $pink;
+  height: 17.02px;
+  width: 50%;
+  z-index: 1;
+}
+
+.card-green-line-rejected {
+  position: absolute;
+  top: 60.47%;
+  left: 0%;
+  bottom: 9.68%;
+  background-color: $green;
+  height: 17.02px;
+  width: 15%;
+  z-index: 1;
+}
+
+.card-pink-line-rejected {
+  position: absolute;
+  top: 60.47%;
+  right: 0%;
+  bottom: 9.68%;
+  background-color: $pink;
+  height: 17.02px;
+  width: 85%;
+  z-index: 1;
+}
+
+.card-text {
+  font-family: $inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 41px;
+  letter-spacing: -0.05em;
+  position: absolute;
+  left: 73px;
+  top: 17px;
+}
+
+.card-status {
+  position: absolute;
+  width: 164px;
+  height: 49px;
+  left: 432px;
+  top: 80px;
+  z-index: 2;
+
+  p {
+    font-size: 31px;
+  }
 }

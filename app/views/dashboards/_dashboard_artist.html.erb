@@ -9,12 +9,7 @@
     <h3 class= "dashboard-subtitle">Pending Gigs</h3>
     <div class="dashboard-pink-line-subtitle"></div>
     <% @bookings.pending.each do |booking| %>
-      <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= booking.event.venue.image_url %>)">
-        <p><%= booking.event.venue.name %></p>
-        <p><%= booking.event.venue.address %></p>
-        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
-        <p><%= booking.status %></p>
-      </div>
+      <%= render "shared/dashboard-card-pending", booking: booking %>
     <% end %>
   <% end %>
 
@@ -30,12 +25,7 @@
     <h3 class= "dashboard-subtitle">Rejected Gigs</h3>
     <div class="dashboard-pink-line-subtitle"></div>
     <% @bookings.rejected.each do |booking| %>
-      <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= booking.event.venue.image_url %>)">
-        <p><%= booking.event.venue.name %></p>
-        <p><%= booking.event.venue.address %></p>
-        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
-        <p><%= booking.status %></p>
-      </div>
+      <%= render "shared/dashboard-card-rejected", booking: booking %>
     <% end %>
   <% end %>
 
@@ -43,12 +33,7 @@
     <h3 class= "dashboard-subtitle">Past Gigs</h3>
     <div class="dashboard-pink-line-subtitle"></div>
     <% @bookings.past.each do |booking| %>
-      <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= booking.event.venue.image_url %>)">
-        <p><%= booking.event.venue.name %></p>
-        <p><%= booking.event.venue.address %></p>
-        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
-        <p><%= booking.status %></p>
-      </div>
+     <%= render "shared/dashboard-card-past", booking: booking %>
     <% end %>
   <% end %>
 
