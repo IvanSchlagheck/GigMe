@@ -1,0 +1,40 @@
+.dashboard-head-text {
+  h1{
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Sora', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 125px;
+    letter-spacing: -0.05em;
+    position: relative;
+    z-index: 1;
+  }
+  .dashboard-green-line-header {
+    width: 77%;
+    height: 22px;
+    background-color: $green;
+    transform: translate(-54%, -217%);
+    z-index: -1;
+  }
+}
+
+.dashboard-subtitle {
+  color: #ffffff;
+  font-family: $inter;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: -0,05em;
+  position: relative;
+  z-index: 1;
+}
+
+.dashboard-pink-line-subtitle {
+  width: 77%;
+  height: 15px;
+  background-color: $pink;
+  transform: translate(-77%, -125%);
+  z-index: -1;
+}
