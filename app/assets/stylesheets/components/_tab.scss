@@ -1,19 +1,34 @@
+.tabs {
+  display: flex;
+  justify-content: space-between;
+}
+.tabs-right {
+  width: 45%;
+}
+
+.text-arrow {
+  transform: translate(-1px, 22px);
+}
+
 .images-tab {
+  
+  width: 45%;
+
   h4 {
     color: white;
     font-family: $inter;
     font-size: 45px;
     letter-spacing: -0.05em;
-    transform: translate(27%, 278%);
+    transform: translate(78%, 278%);
     position: relative;
     z-index: 1;
   }
 
   .tab-green-line {
-    width: 77%;
+    width: 100%;
     height: 22px;
     background-color: $green;
-    transform: translate(-48%, 504%);
+    transform: translate(0%, 472%);
     z-index: -1;
   }
 
@@ -23,7 +38,7 @@
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 20px solid $pink;
-    transform: translate(637%, 576%);
+    transform: translate(1165%, 576%);
     position: relative;
     z-index: 1;
   }
@@ -46,16 +61,16 @@
     font-family: $inter;
     font-size: 45px;
     letter-spacing: -0.05em;
-    transform: translate(59%, 92%);
+    // transform: translate(59%, 92%);
     position: relative;
     z-index: 1;
   }
 
   .tab-green-line {
-    width: 77%;
+    width: 100%;
     height: 22px;
     background-color: $green;
-    transform: translate(76%, 32%);
+    // transform: translate(76%, 32%);
     z-index: -1;
   }
 
@@ -65,7 +80,7 @@
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 20px solid $pink;
-    transform: translate(1952%, 52%);
+    transform: translate(3px, 26px);
     position: relative;
     z-index: 1;
   }
@@ -77,16 +92,16 @@
     font-family: $inter;
     font-size: 45px;
     letter-spacing: -0.05em;
-    transform: translate(59%, 92%);
+    // transform: translate(59%, 92%);
     position: relative;
     z-index: 1;
   }
 
   .tab-pink-line {
-    width: 77%;
+    width: 100%;
     height: 22px;
     background-color: $pink;
-    transform: translate(76%, 32%);
+    // transform: translate(76%, 32%);
     z-index: -1;
   }
 
@@ -96,7 +111,7 @@
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 20px solid $green;
-    transform: translate(2057%, 61%);
+    transform: translate(3px, 26px);
     position: relative;
     z-index: 1;
   }
@@ -108,16 +123,16 @@
     font-family: $inter;
     font-size: 45px;
     letter-spacing: -0.05em;
-    transform: translate(59%, 92%);
+    // transform: translate(59%, 92%);
     position: relative;
     z-index: 1;
   }
 
   .tab-green-line {
-    width: 77%;
+    width: 100%;
     height: 22px;
     background-color: $green;
-    transform: translate(76%, 32%);
+    // transform: translate(76%, 32%);
     z-index: -1;
   }
 
@@ -127,7 +142,7 @@
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 20px solid $pink;
-    transform: translate(2324%, 52%);
+    transform: translate(3px, 26px);
     position: relative;
     z-index: 1;
   }
