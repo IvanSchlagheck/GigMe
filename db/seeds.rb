@@ -236,38 +236,49 @@ puts "Creating venues finished!"
 
 puts 'Creating events...'
 
+date = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
 event1 = Event.new(
-  starts_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
-  ends_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
+  starts_at: date,
+  ends_at: date + 1,
   venue_id: 1
 )
 event1.save!
 puts "Created event1"
-
+date2 = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
 event2 = Event.new(
-  starts_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
-  ends_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
+  starts_at: date2,
+  ends_at: date2 + 1,
   venue_id: 1
 )
 event2.save!
 puts "Created event2"
-
+date3 = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
 event3 = Event.new(
-  starts_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
-  ends_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
+  starts_at: date3,
+  ends_at: date3 + 1,
   venue_id: 1
 )
 event3.save!
 puts "Created event3"
-
+date = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
 event4 = Event.new(
-  starts_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
-  ends_at: Faker::Date.between(from: '2021-11-23', to: '2023-09-25'),
+  starts_at: date,
+  ends_at: date + 1,
   venue_id: 1
 )
 event4.save!
 puts "Created event4"
 
+30.times do
+  date = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
+  event = Event.new(
+  starts_at: date,
+  ends_at: date + 1,
+  venue_id: rand(2..16)
+)
+event.save!
+end
+puts "created 30 events"
 puts "Creating events finished!"
 
 # Creating BOOKING seeds
@@ -305,5 +316,6 @@ booking4 = Booking.new(
 )
 booking4.save!
 puts "Created booking4"
+
 
 puts "Creating bookings finished!"
