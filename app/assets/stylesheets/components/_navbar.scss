@@ -1,9 +1,13 @@
 .navbar {
-  justify-content: flex-end;
+  justify-content: space-between;
   margin-bottom: 50px;
   width: 100%;
   z-index: 10;
   height: auto;
+}
+
+#homenavbar {
+  margin-bottom: -50px;
 }
 
 .signuplogin {
@@ -28,6 +32,7 @@
 
 .navbar-items {
   display: flex;
+  justify-content: left;
 }
 
 .card-pink-line-navbar {
@@ -54,12 +59,12 @@ z-index: -1;
 }
 
 .gigmelogo {
-
   color: white;
   letter-spacing: -0.05em;
   font-size: 50px;
   line-height: 36px;
   font-family: $inter;
+  justify-content: flex-start;
 }
 
 .gigmelogo:hover {
