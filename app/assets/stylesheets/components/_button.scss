@@ -19,3 +19,22 @@
 .search-button:hover {
   color: white;
 }
+
+.submit-button {
+  background-color: #E500A4;
+  color: white;
+  font-size: large;
+  font-family: 'Inter', sans-serif;
+  border-radius: 50px;
+  opacity: 1;
+  position: relative;
+  margin-top: -6px;
+  margin: 12px;
+  display: block;
+  height: 47px;
+  text-align: justify;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+
+}
