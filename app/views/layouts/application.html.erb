@@ -16,7 +16,9 @@
   <body class= "grad">
 
     <%= render 'shared/flashes' %>
-    <%= render 'shared/navbar' %>
+    <% unless controller_name == 'pages' && action_name == 'home' %>
+      <%= render 'shared/navbar' %>
+    <% end %>
     <%= yield %>
     <%= render 'shared/footer' %>
 
