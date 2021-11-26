@@ -1,5 +1,5 @@
 <div>
-  <form action="" method="get">
+  <form action="/venues" method="get">
     <div class="product-search">
       <div class="search-element">
         <label class="search-label">Choose a date:</label>
@@ -19,3 +19,17 @@
     </div>
   </form>
 </div>
+
+<%= form_tag venues_path, method: :get do %>
+  <div class="product-search">
+    <div class="search-element">
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control search-input",
+        placeholder: "Find a venue"
+      %>
+    </div>
+    <%= submit_tag "GigMe!", class: "search-button" %>
+  </div>
+
+<% end %>
