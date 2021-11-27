@@ -1,19 +1,28 @@
 <%= render "shared/show-banner", venue: @venue %>
 <div class="container">
-  <% @venue.events.each_with_index do |event, ind| %>
+  <% @venue.events.sort_by { |event| event.starts_at }.each_with_index do |event, ind| %>
 
-    <button class="event-modal-button" data-buttonId="<%= ind %>">
+    <button class="event-modal-button search-button" data-buttonId="<%= ind %>">
       <%= event.starts_at %> until <%= event.ends_at %>
     </button>
 
     <div class="event-modal" id="event-modal-<%= ind %>">
-      <div class="event-modal-content">
-        modal content here
-        <%= simple_form_for :booking, url: bookings_path do |f| %>
-          <%= f.hidden_field :event, value: event.id %>
-          <%= f.input :content, as: :text %>
-          <%= f.submit %>
-        <% end %>
+
+        <div class="event-modal-content">
+          <div class="popup-text">
+           <div class="card-green-line-popup"></div>
+              <%=  @venue.name %>
+              <br>
+              <%= @venue.address %>
+            </div>
+
+            <%= simple_form_for :booking, url: bookings_path do |f| %>
+            <%= f.hidden_field :event, value: event.id %>
+
+            <%= f.input :content, as: :text, input_html: {class: 'text-box'}, placeholder: "Type a message here..." %>
+            <%= f.button :submit, class: 'submit-button'%>
+
+    <% end %>
         <span class="event-modal-close" id="event-modal-close-<%= ind %>">&times;</span>
       </div>
     </div>
@@ -55,4 +64,3 @@
     </div>
   </div>
 </div>
-

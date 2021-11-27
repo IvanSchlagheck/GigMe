@@ -1,0 +1,11 @@
+<div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= booking.event.venue.image_url %>)">
+  <div class="card-text">
+    <p><%= booking.event.venue.name %></p>
+    <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
+  </div>
+  <div class="card-status">
+    <p><%= booking.status.capitalize %></p>
+  </div>
+  <div class="card-green-line-pending"></div>
+  <div class="card-pink-line-pending"></div>
+</div>
