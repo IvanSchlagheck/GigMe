@@ -4,6 +4,8 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :events, through: :bookings
   has_one :artist_profil
+  has_many :reviews_as_review_giver, class_name: "Review", foreign_key: :review_giver_id
+  has_many :reviews_as_review_receiver, class_name: "Review", foreign_key: :review_receiver_id
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
