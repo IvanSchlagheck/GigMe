@@ -1,14 +1,12 @@
 <%= render "shared/venue-show-banner", venue: @venue %>
 <div class="container">
-  <% @venue.events.sort_by { |event| event.start_time }.each_with_index do |event, ind| %>
-
-    <button class="event-modal-button search-button" data-buttonId="<%= ind %>">
-       <%# <%= event.start_time.strftime('%^a') %>
-       <%= event.start_time %> until <%= event.end_time %>
-    </button>
-
-    <div class="event-modal" id="event-modal-<%= ind %>">
-
+ <%= week_calendar(events: @events, attribute: :start_time, end_attribute: :end_time) do |date, events| %>
+    <%= date %>
+    <% events.each do |event| %>
+      <button class="event-modal-button search-button" data-buttonId="<%= event.id %>">
+        <%= event.start_time %> until <%= event.end_time %>
+      </button>
+      <div class="event-modal" id="event-modal-<%= event.id %>">
         <div class="event-modal-content">
           <div class="popup-text">
            <div class="card-green-line-popup"></div>
@@ -18,29 +16,19 @@
             </div>
 
             <%= simple_form_for :booking, url: bookings_path do |f| %>
-            <%= f.hidden_field :event, value: event.id %>
+              <%= f.hidden_field :event, value: event.id %>
 
-            <%= f.input :content, as: :text, input_html: {class: 'text-box'}, placeholder: "Type a message here..." %>
-            <%= f.button :submit, class: 'submit-button'%>
-
-    <% end %>
-        <span class="event-modal-close" id="event-modal-close-<%= ind %>">&times;</span>
-      </div>
-    </div>
-  <% end %>
-
-  <%# ------------------------------------CALENDAR------------------------------------------------------------ %>
-  <%= week_calendar(events: @events) do |date, events| %>
-        <%= date %>
-        <% events.each do |events| %>
-          <div class="event">
-            <%= event.start_time.strftime('%^a')%>
+              <%= f.input :content, as: :text, input_html: {class: 'text-box'}, placeholder: "Type a message here..." %>
+              <%= f.button :submit, class: 'submit-button'%>
+            <% end %>
+            <span class="event-modal-close" id="event-modal-close-<%= event.id %>">&times;</span>
           </div>
-        <% end %>
-      <% end %>
-
-  <%# ---------------- CARDS ----------------------------------------------------- %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
 </div>
+
 
 
 <div class="tabs">

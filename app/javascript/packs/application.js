@@ -18,4 +18,4 @@ require("channels")
 
 import "controllers"
 import "bootstrap"
-import  "./popup"
+import "./popup"
