@@ -1,0 +1,49 @@
+.simple-calendar {
+  table {
+    min-height: 30vh;
+  }
+  .today {
+    background-color: #FAF3DD;
+  }
+}
+
+.meeting {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+}
+
+.meeting:hover {
+  background: #1BCB7F;
+  color: white;
+}
+
+.table {
+  color: white;
+}
+
+.btn-pink {
+  color: #fff;
+  background-color: #e500a4;
+  border-color: #e500a4;
+  border-radius: 19px;
+
+}
+
+.btn-outline-pink {
+  color: #fff;
+  border-color: #e500a4;
+  border-radius: 19px;
+}
+
+.btn-pink:hover {
+  background-color: #b80986;
+  border-color: #b80986;
+  color: white;
+}
+
+.btn-outline-pink:hover {
+  color: rgb(180, 176, 176);
+}

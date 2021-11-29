@@ -3,7 +3,8 @@
   <% @venue.events.sort_by { |event| event.starts_at }.each_with_index do |event, ind| %>
 
     <button class="event-modal-button search-button" data-buttonId="<%= ind %>">
-      <%= event.starts_at.strftime('%^a') %>
+       <%# <%= event.starts_at.strftime('%^a') %>
+       <%= event.start_time %> until <%= event.end_time %>
     </button>
 
     <div class="event-modal" id="event-modal-<%= ind %>">
@@ -27,6 +28,16 @@
       </div>
     </div>
   <% end %>
+
+  <%# ------------------------------------CALENDAR------------------------------------------------------------ %>
+  <%= week_calendar(events: @events, end_attribute: :end_time) do |date, events| %>
+        <%= date %>
+        <% events.each do |events| %>
+          <div class="event">
+            <%= event.starts_at.strftime('%^a')%>
+          </div>
+        <% end %>
+      <% end %>
 
   <%# ---------------- CARDS ----------------------------------------------------- %>
 </div>
