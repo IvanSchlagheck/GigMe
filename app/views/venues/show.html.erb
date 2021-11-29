@@ -8,6 +8,7 @@
       </button>
       <div class="event-modal" id="event-modal-<%= event.id %>">
         <div class="event-modal-content">
+        <div class="event-modal-close" id="event-modal-close-<%= ind %>">&times;</div>
           <div class="popup-text">
            <div class="card-green-line-popup"></div>
               <%=  @venue.name %>
@@ -18,15 +19,28 @@
             <%= simple_form_for :booking, url: bookings_path do |f| %>
               <%= f.hidden_field :event, value: event.id %>
 
-              <%= f.input :content, as: :text, input_html: {class: 'text-box'}, placeholder: "Type a message here..." %>
-              <%= f.button :submit, class: 'submit-button'%>
-            <% end %>
-            <span class="event-modal-close" id="event-modal-close-<%= event.id %>">&times;</span>
+
+            <%= f.input :content, as: :text, input_html: {id: 'text-box'}, label: false, placeholder: "Type a message here..."%>
+            <%= f.button :submit, class: 'submit-button'%>
+
+    <% end %>            
           </div>
         </div>
-      </div>
-    <% end %>
   <% end %>
+
+
+  <%# ------------------------------------CALENDAR------------------------------------------------------------ %>
+  <%= week_calendar(events: @events) do |date, events| %>
+        <%= date %>
+        <% events.each do |events| %>
+          <div class="event">
+
+          </div>
+        <% end %>
+      <% end %>
+
+  <%# ---------------- CARDS ----------------------------------------------------- %>
+
 </div>
 
 
