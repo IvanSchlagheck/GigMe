@@ -2,7 +2,7 @@
   <div class="events-container">
     <% event.each do |event| %>
       <div class="carousel-card-top">
-          <%= event.starts_at.strftime('%^a') %>
+          <%= event.start_time.strftime('%^a') %>
       </div>
       <div class="event">
         <%= event %>

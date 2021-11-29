@@ -1,7 +1,7 @@
  <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= booking.user.image_url %>)">
   <div class="card-text">
     <p><%= booking.user.first_name %></p>
-    <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
+    <p><%= booking.event.start_time %> - <%= booking.event.end_time %></p>
   </div>
   <div class="card-status">
     <p><%= booking.status.capitalize %></p>

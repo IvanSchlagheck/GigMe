@@ -3,5 +3,9 @@
     <h1><%= @user.first_name.capitalize %></h1>
     <div class="banner-green-line"></div>
     <h2><%= @user.last_name %></h2>
+    <div class="container">
+      <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill, id: "artist-image" %>
+    </div>
+
   </div>
 </div>
