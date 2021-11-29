@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_142441) do
+ActiveRecord::Schema.define(version: 2021_11_29_093406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,15 @@ ActiveRecord::Schema.define(version: 2021_11_24_142441) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["booking_id"], name: "index_messages_on_booking_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "review_giver_id"
+    t.bigint "review_receiver_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["review_giver_id"], name: "index_reviews_on_review_giver_id"
+    t.index ["review_receiver_id"], name: "index_reviews_on_review_receiver_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -79,5 +88,7 @@ ActiveRecord::Schema.define(version: 2021_11_24_142441) do
   add_foreign_key "events", "venues"
   add_foreign_key "messages", "bookings"
   add_foreign_key "messages", "users"
+  add_foreign_key "reviews", "users", column: "review_giver_id"
+  add_foreign_key "reviews", "users", column: "review_receiver_id"
   add_foreign_key "venues", "users"
 end
