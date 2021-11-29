@@ -5,3 +5,4 @@ class RenameColumn < ActiveRecord::Migration[6.0]
       t.rename :ends_at, :end_time
   end
 end
+end
