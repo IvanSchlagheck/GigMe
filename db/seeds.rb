@@ -112,7 +112,7 @@ puts 'Creating venues...'
 file1 = URI.open('https://lh5.googleusercontent.com/p/AF1QipPLEIZw135hjAcoCJPiXOmcWUXiuxKRXC8y-bDD=w1080-k-no')
 venue1 = Venue.new(
   name: "Brauhaus Neulich",
-  address: "Selchower Str. 20, 12049",
+  address: "Selchower Str. 20, 12049 Berlin",
   contact_details: "Mail: brauhausneulich@venues.com",
   user_id: 5
 )
@@ -123,7 +123,7 @@ puts "Created #{venue1.name}"
 file2 = URI.open("https://lh5.googleusercontent.com/p/AF1QipOtjujjkdgrbSLOvsVqYyxKtSwohDWPQLuAT5DI=w1080-k-no")
 venue2 = Venue.new(
   name: "Fuks Bar",
-  address: "Hobrechtstraße 64, 12047",
+  address: "Hobrechtstraße 64, 12047 Berlin",
   contact_details: "Mail: fuksbar@venues.com",
   user_id: 6
 )
@@ -134,7 +134,7 @@ puts "Created #{venue2.name}"
 file3 = URI.open("https://www.top10berlin.de/sites/top10berlin.de/files/styles/juicebox/public/location/slider/2018/01/22/rickenbackers-music-inn_bars-mit-live-musik_top10berlin_foto_rickenbackers_1200x600_1_0.jpg?itok=PRWBGgCF")
 venue3 = Venue.new(
   name: "Rickenbacker’s Music-Inn",
-  address: "Bundesallee 194B, 10717",
+  address: "Bundesallee 194B, 10717 Berlin",
   contact_details: "Mail: RickenbackersMusic-Inn@venues.com",
   user_id: 7
 )
@@ -145,7 +145,7 @@ puts "Created #{venue3.name}"
 file4 = URI.open("https://i.pinimg.com/736x/f6/a8/15/f6a8157d2ec1db9f35b0901fef62e398.jpg")
 venue4 = Venue.new(
   name: "Lyrik",
-  address: "Kollwitzstraße 97, 10435",
+  address: "Kollwitzstraße 97, 10435 Berlin",
   contact_details: "Mail: Lyrik@venues.com",
   user_id: 8
 )
@@ -156,7 +156,7 @@ puts "Created #{venue4.name}"
 file5 = URI.open("https://cdn.eventinc.de/provider_pictures/pictures/000/235/345/cropped/eventlocation-cassiopeia-berlin.jpg?1579516932")
 venue5 = Venue.new(
   name: "Cassiopeia",
-  address: "Revaler Str. 99, 10245",
+  address: "Revaler Str. 99, 10245 Berlin",
   contact_details: "Mail: Cassiopeia@venues.com",
   user_id: 9
 )
@@ -167,7 +167,7 @@ puts "Created #{venue5.name}"
 file6 = URI.open("https://thehatbar.de/wp-content/uploads/2020/04/Hat-bxSlider-01_1920x1000_01.jpg")
 venue6 = Venue.new(
   name: "The Hat Bar Berlin",
-  address: "Lotte-Lenya-Bogen 550, 10623",
+  address: "Lotte-Lenya-Bogen 550, 10623 Berlin",
   contact_details: "Mail: TheHatBarBerlin@venues.com",
   user_id: 10
 )
@@ -178,7 +178,7 @@ puts "Created #{venue6.name}"
 file7 = URI.open("https://helfen-shop.berlin/wp-content/uploads/2020/03/Yorckschlo%CC%88sschen_19032020.jpg")
 venue7 = Venue.new(
   name: "Yorckschlösschen",
-  address: "Yorckstraße 15, 10965 ",
+  address: "Yorckstraße 15, 10965 Berlin",
   contact_details: "Mail: Yorckschlösschen@venues.com",
   user_id: 11
 )
@@ -189,7 +189,7 @@ puts "Created #{venue7.name}"
 file8 = URI.open("https://www.berlin.de/binaries/adressen/71128/source/1355765612/624x468/")
 venue8 = Venue.new(
   name: "Madame Claude",
-  address: "Lübbener Str. 19, 10997 ",
+  address: "Lübbener Str. 19, 10997 Berlin",
   contact_details: "Mail: MadameClaude@venues.com",
   user_id: 12
 )
@@ -200,7 +200,7 @@ puts "Created #{venue8.name}"
 file9 = URI.open("https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2014/06/16/fullsize_privatclub_betreiber4_2.jpg?itok=QVTBLOOG")
 venue9 = Venue.new(
   name: "Schokoladen",
-  address: "Ackerstraße 169, 10115 ",
+  address: "Ackerstraße 169, 10115 Berlin",
   contact_details: "Mail: Schokoladen@venues.com",
   user_id: 13
 )
@@ -211,7 +211,7 @@ puts "Created #{venue9.name}"
 file10 = URI.open("http://mitvergnuegen.com/wp-content/uploads/2015/07/fairytalebar-3-von-4.jpg")
 venue10 = Venue.new(
   name: "FairytaleBar",
-  address: "Am Friedrichshain 24, 10407 ",
+  address: "Am Friedrichshain 24, 10407 Berlin",
   contact_details: "Mail: FairytaleBar@venues.com",
   user_id: 14
 )
@@ -222,7 +222,7 @@ puts "Created #{venue10.name}"
 file11 = URI.open("https://images.squarespace-cdn.com/content/v1/55146be5e4b0392be71840b6/1432999631685-PKYLVMJTHJ4P9M7FEZCB/image-asset.gif?format=1000w")
 venue11 = Venue.new(
   name: "Zig Zag Jazz Club Berlin",
-  address: "Hauptstraße 89, 12159 ",
+  address: "Hauptstraße 89, 12159 Berlin",
   contact_details: "Mail: ZigZagJazzClubBerlin@venues.com",
   user_id: 15
 )
@@ -244,7 +244,7 @@ puts "Created #{venue12.name}"
 file13 = URI.open("https://www.eschschloraque.de/sites/default/files/pictures/Eschschloraque_Juli_2010_1B.jpg")
 venue13 = Venue.new(
   name: "Eschschloraque",
-  address: "Rosenthaler Str. 39 - 2, 10178 ",
+  address: "Rosenthaler Str. 39 - 2, 10178 Berlin",
   contact_details: "Mail: Eschschloraque@venues.com",
   user_id: 17
 )
@@ -255,7 +255,7 @@ puts "Created #{venue13.name}"
 file14 = URI.open("https://media-cdn.tripadvisor.com/media/photo-p/12/59/bc/5d/studio-8.jpg")
 venue14 = Venue.new(
   name: "Studio 8",
-  address: "Grüntaler Str. 8, 13357 ",
+  address: "Grüntaler Str. 8, 13357 Berlin",
   contact_details: "Mail: Studio8@venues.com",
   user_id: 18
 )
@@ -266,7 +266,7 @@ puts "Created #{venue14.name}"
 file15 = URI.open("https://jazzity.net/img/sowieso01.jpg")
 venue15 = Venue.new(
   name: "Sowieso",
-  address: "Weisestraße 24, 12049",
+  address: "Weisestraße 24, 12049 Berlin",
   contact_details: "Mail: Sowieso@venues.com",
   user_id: 19
 )
@@ -277,7 +277,7 @@ puts "Created #{venue15.name}"
 file16 = URI.open("https://www.rockabilly-rules.com/blog/wp-content/uploads/2014/10/roadrunner_paradise-berlin.jpg")
 venue16 = Venue.new(
   name: "Roadrunner's Paradise",
-  address: "Saarbrücker Str. 24, 10405 ",
+  address: "Saarbrücker Str. 24, 10405 Berlin",
   contact_details: "Mail: RoadrunnersParadise@venues.com",
   user_id: 20
 )
