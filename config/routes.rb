@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/bookings/:id/decline', to: 'bookings#decline', as: :booking_decline
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :venues, only: [ :index, :show ]
+    resources :events, only: [ :create ]
   resources :users, only: [ :index, :show ]
   resources :bookings, only: [ :create, :show ] do
     resources :messages, only: :create
