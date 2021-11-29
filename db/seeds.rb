@@ -317,5 +317,30 @@ booking4 = Booking.new(
 booking4.save!
 puts "Created booking4"
 
+puts "Creating ArtistProfils"
+
+ap1 = ArtistProfil.new(
+  user_id: 2,
+  youtube: "https://www.youtube.com/user/rihanna",
+  soundcloud: "https://soundcloud.com/rhiannaofficial"
+)
+ap1.save!
+puts "ap1 created"
+
+ap2 = ArtistProfil.new(
+  user_id: 4,
+  youtube: "https://www.youtube.com/channel/UCehQT6NHMZjl0giIfY7f1mw",
+  soundcloud: "https://soundcloud.com/edith-piaf-official"
+)
+ap2.save 
+puts "ap2 created"
+
+ap3 = ArtistProfil.new(
+  user_id: 3,
+  youtube: "https://www.youtube.com/c/marilynmanson",
+  soundcloud: "https://soundcloud.com/marilynmanson"
+)
+ap3.save 
+puts "ap3 created"
 
 puts "Creating bookings finished!"
