@@ -12,6 +12,7 @@ require "open-uri"
 
 puts 'Creating users...'
 
+file = URI.open('https://image.gala.de/22313448/t/EN/v3/w1440/r1/-/rihanna.jpg')
 marc = User.new(
   username: 'marc',
   email: 'marc@gigme.com',
@@ -20,12 +21,12 @@ marc = User.new(
   last_name: 'Rodenbusch',
   phone_number: '015736589485',
   status: "host",
-  # image_url: "/marc.jpg"
 )
+marc.photo.attach(io: file, filename: 'marc.png', content_type: 'image/png')
 marc.save!
 puts "created user #{marc.username}"
 
-
+file = URI.open('https://i.scdn.co/image/ab6761610000e5eba225fabac2fa170e58d68c34')
 ivan = User.new(
   username: 'ivan',
   email: 'ivan@gigme.com',
@@ -34,11 +35,12 @@ ivan = User.new(
   last_name: 'Schlagheck',
   phone_number: '0123456789',
   status: "artist",
-  # image_url: "/amelie.jpg"
 )
+ivan.photo.attach(io: file, filename: 'ivan.png', content_type: 'image/png')
 ivan.save!
 puts "created user #{ivan.username}"
 
+file = URI.open('https://www.ndr.de/media/michael262_v-quadratxl.jpg')
 damian = User.new(
   username: 'damian',
   email: 'damian@gigme.com',
@@ -47,11 +49,12 @@ damian = User.new(
   last_name: 'Beissel',
   phone_number: '01791317541',
   status: "artist",
-  # image_url: "/amelie.jpg"
 )
+damian.photo.attach(io: file, filename: 'damian.png', content_type: 'image/png')
 damian.save!
 puts "created user #{damian.username}"
 
+file = URI.open('https://www.tierchenwelt.de/images/stories/fotos/saeugetiere/beuteltiere/quokka/quokka_happy_l.jpg')
 amelie = User.new(
   username: 'amelie',
   email: 'amelie@gigme.com',
@@ -60,11 +63,12 @@ amelie = User.new(
   last_name: "D'arenberg",
   phone_number: '0123456789',
   status: "artist",
-  # image_url: "/amelie.jpg"
 )
+amelie.photo.attach(io: file, filename: 'amelie.png', content_type: 'image/png')
 amelie.save!
 puts "created user #{amelie.username}"
 
+file = URI.open('https://image.gala.de/22543710/t/MS/v8/w960/r0.6667/-/beauty-geheimnisse-beyonce.jpg')
 santi = User.new(
   username: 'santi',
   email: 'santi@gigme.com',
@@ -73,9 +77,8 @@ santi = User.new(
   last_name: 'The Champion',
   phone_number: '015736589485',
   status: "host",
-  # image_url: "/marc.jpg"
 )
-
+santi.photo.attach(io: file, filename: 'santi.png', content_type: 'image/png')
 santi.save!
 puts "created user #{santi.username}"
 
