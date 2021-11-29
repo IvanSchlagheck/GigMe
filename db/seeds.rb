@@ -309,7 +309,7 @@ event2.save!
 puts "Created event2"
 date3 = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
 event3 = Event.new(
-  start_end: date3,
+  start_time: date3,
   end_time: date3 + 1,
   venue_id: 1
 )
