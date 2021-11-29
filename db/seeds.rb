@@ -82,11 +82,11 @@ puts "Creating user finished!"
 
 puts 'Creating 30 hosts...'
 
+x = 0
 30.times do
-  x = 0
   name = Faker::Music.band
   user = User.new(
-    username: "#{name.split.join}",
+    username: "#{name.split.join}#{x}",
     email: "#{name.split.join}#{x}@gigme.com",
     password: '12345678',
     first_name: Faker::Music.mambo_no_5,
