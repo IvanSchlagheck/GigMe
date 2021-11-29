@@ -293,32 +293,32 @@ puts 'Creating events...'
 
 date = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
 event1 = Event.new(
-  starts_at: date,
-  ends_at: date + 1,
+  start_end: date,
+  end_time: date + 1,
   venue_id: 1
 )
 event1.save!
 puts "Created event1"
 date2 = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
 event2 = Event.new(
-  starts_at: date2,
-  ends_at: date2 + 1,
+  start_time: date2,
+  end_time: date2 + 1,
   venue_id: 1
 )
 event2.save!
 puts "Created event2"
 date3 = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
 event3 = Event.new(
-  starts_at: date3,
-  ends_at: date3 + 1,
+  start_end: date3,
+  end_time: date3 + 1,
   venue_id: 1
 )
 event3.save!
 puts "Created event3"
 date = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
 event4 = Event.new(
-  starts_at: date,
-  ends_at: date + 1,
+  start_time: date,
+  end_time: date + 1,
   venue_id: 1
 )
 event4.save!
@@ -327,8 +327,8 @@ puts "Created event4"
 30.times do
   date = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
   event = Event.new(
-  starts_at: date,
-  ends_at: date + 1,
+  start_time: date,
+  end_time: date + 1,
   venue_id: rand(2..16)
 )
 event.save!
