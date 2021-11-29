@@ -80,6 +80,25 @@ puts "created user #{santi.username}"
 
 puts "Creating user finished!"
 
+puts 'Creating 30 hosts...'
+
+30.times do
+  x = Faker::Music.band
+  user = User.new(
+    username: "#{x.split.join}",
+    email: "#{x.split.join}@gigme.com",
+    password: '12345678',
+    first_name: Faker::Music.mambo_no_5,
+    last_name: Faker::Music.genre,
+    phone_number: '0123456789',
+    status: "host",
+  )
+  user.save!
+  puts "created user #{user.username}"
+end
+
+puts "Creating 30 hosts finished!"
+
 
 # Creating VENUE seeds
 
@@ -100,7 +119,7 @@ venue2 = Venue.new(
   image_url: "https://lh5.googleusercontent.com/p/AF1QipOtjujjkdgrbSLOvsVqYyxKtSwohDWPQLuAT5DI=w1080-k-no",
   address: "Hobrechtstraße 64, 12047",
   contact_details: "Mail: fuksbar@venues.com",
-  user_id: 1
+  user_id: 5
 )
 venue2.save!
 puts "Created #{venue2.name}"
@@ -110,7 +129,7 @@ venue3 = Venue.new(
   image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/juicebox/public/location/slider/2018/01/22/rickenbackers-music-inn_bars-mit-live-musik_top10berlin_foto_rickenbackers_1200x600_1_0.jpg?itok=PRWBGgCF",
   address: "Bundesallee 194B, 10717",
   contact_details: "Mail: RickenbackersMusic-Inn@venues.com",
-  user_id: 1
+  user_id: 6
 )
 venue3.save!
 puts "Created #{venue3.name}"
@@ -120,7 +139,7 @@ venue4 = Venue.new(
   image_url: "https://i.pinimg.com/736x/f6/a8/15/f6a8157d2ec1db9f35b0901fef62e398.jpg",
   address: "Kollwitzstraße 97, 10435",
   contact_details: "Mail: Lyrik@venues.com",
-  user_id: 1
+  user_id: 7
 )
 venue4.save!
 puts "Created #{venue4.name}"
@@ -130,7 +149,7 @@ venue5 = Venue.new(
   image_url: "https://cdn.eventinc.de/provider_pictures/pictures/000/235/345/cropped/eventlocation-cassiopeia-berlin.jpg?1579516932",
   address: "Revaler Str. 99, 10245",
   contact_details: "Mail: Cassiopeia@venues.com",
-  user_id: 1
+  user_id: 8
 )
 venue5.save!
 puts "Created #{venue5.name}"
@@ -140,7 +159,7 @@ venue6 = Venue.new(
   image_url: "https://thehatbar.de/wp-content/uploads/2020/04/Hat-bxSlider-01_1920x1000_01.jpg",
   address: "Lotte-Lenya-Bogen 550, 10623",
   contact_details: "Mail: TheHatBarBerlin@venues.com",
-  user_id: 1
+  user_id: 9
 )
 venue6.save!
 puts "Created #{venue6.name}"
@@ -150,7 +169,7 @@ venue7 = Venue.new(
   image_url: "https://helfen-shop.berlin/wp-content/uploads/2020/03/Yorckschlo%CC%88sschen_19032020.jpg",
   address: "Yorckstraße 15, 10965 ",
   contact_details: "Mail: Yorckschlösschen@venues.com",
-  user_id: 1
+  user_id: 10
 )
 venue7.save!
 puts "Created #{venue7.name}"
@@ -160,7 +179,7 @@ venue8 = Venue.new(
   image_url: "https://www.berlin.de/binaries/adressen/71128/source/1355765612/624x468/",
   address: "Lübbener Str. 19, 10997 ",
   contact_details: "Mail: MadameClaude@venues.com",
-  user_id: 1
+  user_id: 11
 )
 venue8.save!
 puts "Created #{venue8.name}"
@@ -170,7 +189,7 @@ venue9 = Venue.new(
   image_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/list_image/public/location/mainimages/2014/06/16/fullsize_privatclub_betreiber4_2.jpg?itok=QVTBLOOG",
   address: "Ackerstraße 169, 10115 ",
   contact_details: "Mail: Schokoladen@venues.com",
-  user_id: 1
+  user_id: 12
 )
 venue9.save!
 puts "Created #{venue9.name}"
@@ -180,7 +199,7 @@ venue10 = Venue.new(
   image_url: "http://mitvergnuegen.com/wp-content/uploads/2015/07/fairytalebar-3-von-4.jpg",
   address: "Am Friedrichshain 24, 10407 ",
   contact_details: "Mail: FairytaleBar@venues.com",
-  user_id: 1
+  user_id: 13
 )
 venue10.save!
 puts "Created #{venue10.name}"
@@ -190,7 +209,7 @@ venue11 = Venue.new(
   image_url: "https://images.squarespace-cdn.com/content/v1/55146be5e4b0392be71840b6/1432999631685-PKYLVMJTHJ4P9M7FEZCB/image-asset.gif?format=1000w",
   address: "Hauptstraße 89, 12159 ",
   contact_details: "Mail: ZigZagJazzClubBerlin@venues.com",
-  user_id: 1
+  user_id: 14
 )
 venue11.save!
 puts "Created #{venue11.name}"
@@ -200,7 +219,7 @@ venue12 = Venue.new(
   image_url: "https://www.theclubmap.com/wp-content/uploads/2013/05/Bi-Nuu-4.jpg",
   address: "U Schlesisches Tor",
   contact_details: "Mail: BiNuu@venues.com",
-  user_id: 1
+  user_id: 15
 )
 venue12.save!
 puts "Created #{venue12.name}"
@@ -210,7 +229,7 @@ venue13 = Venue.new(
   image_url: "https://www.eschschloraque.de/sites/default/files/pictures/Eschschloraque_Juli_2010_1B.jpg",
   address: "Rosenthaler Str. 39 - 2, 10178 ",
   contact_details: "Mail: Eschschloraque@venues.com",
-  user_id: 1
+  user_id: 16
 )
 venue13.save!
 puts "Created #{venue13.name}"
@@ -220,7 +239,7 @@ venue14 = Venue.new(
   image_url: "https://media-cdn.tripadvisor.com/media/photo-p/12/59/bc/5d/studio-8.jpg",
   address: "Grüntaler Str. 8, 13357 ",
   contact_details: "Mail: Studio8@venues.com",
-  user_id: 1
+  user_id: 17
 )
 venue14.save!
 puts "Created #{venue14.name}"
@@ -230,7 +249,7 @@ venue15 = Venue.new(
   image_url: "https://jazzity.net/img/sowieso01.jpg",
   address: "Weisestraße 24, 12049",
   contact_details: "Mail: Sowieso@venues.com",
-  user_id: 1
+  user_id: 18
 )
 venue15.save!
 puts "Created #{venue15.name}"
@@ -240,7 +259,7 @@ venue16 = Venue.new(
   image_url: "https://www.rockabilly-rules.com/blog/wp-content/uploads/2014/10/roadrunner_paradise-berlin.jpg",
   address: "Saarbrücker Str. 24, 10405 ",
   contact_details: "Mail: RoadrunnersParadise@venues.com",
-  user_id: 1
+  user_id: 19
 )
 venue16.save!
 puts "Created #{venue16.name}"
@@ -347,7 +366,7 @@ ap2 = ArtistProfil.new(
   youtube: "https://www.youtube.com/channel/UCehQT6NHMZjl0giIfY7f1mw",
   soundcloud: "https://soundcloud.com/edith-piaf-official"
 )
-ap2.save 
+ap2.save
 puts "ap2 created"
 
 ap3 = ArtistProfil.new(
@@ -355,7 +374,7 @@ ap3 = ArtistProfil.new(
   youtube: "https://www.youtube.com/c/marilynmanson",
   soundcloud: "https://soundcloud.com/marilynmanson"
 )
-ap3.save 
+ap3.save
 puts "ap3 created"
 
 puts "Creating bookings finished!"
