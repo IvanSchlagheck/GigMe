@@ -15,6 +15,11 @@
           <% if current_user %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "signuplogin" %>
             <%= link_to "My dashboard", dashboard_path, class: "signuplogin" %>
+                <% if current_user.photo.attached?%>
+                   <%= image_tag current_user.photo.key %>
+              <% else %>
+                  <%= image_tag "https://image.gala.de/22313448/t/EN/v3/w1440/r1/-/rihanna.jpg", class: "avatar"%>
+              <% end %>
           <% end %>
         <div class="card-pink-line-navbar"></div>
         <div class="card-green-line-navbar"></div>

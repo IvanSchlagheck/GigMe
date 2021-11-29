@@ -19,3 +19,4 @@ require("channels")
 import "controllers"
 import "bootstrap"
 import  "./popup"
+import  { coverFlowEfx } from "../channels/carousel"

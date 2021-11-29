@@ -9,7 +9,7 @@
     <h3 class= "dashboard-subtitle">Pending Gigs</h3>
     <div class="dashboard-pink-line-subtitle"></div>
     <% @bookings.pending.each do |booking| %>
-      <%= render "shared/dashboard-card-pending", booking: booking %>
+      <%= render "shared/artist-dashboard/dashboard-card-pending", booking: booking %>
     <% end %>
   <% end %>
 
@@ -17,7 +17,7 @@
     <h3 class= "dashboard-subtitle">Confirmed Gigs</h3>
     <div class="dashboard-pink-line-subtitle"></div>
     <% @bookings.confirmed.each do |booking| %>
-      <%= render "shared/dashboard-card-confirmed", booking: booking %>
+      <%= render "shared/artist-dashboard/dashboard-card-confirmed", booking: booking %>
     <% end %>
   <% end %>
 
@@ -25,7 +25,7 @@
     <h3 class= "dashboard-subtitle">Rejected Gigs</h3>
     <div class="dashboard-pink-line-subtitle"></div>
     <% @bookings.rejected.each do |booking| %>
-      <%= render "shared/dashboard-card-rejected", booking: booking %>
+      <%= render "shared/artist-dashboard/dashboard-card-rejected", booking: booking %>
     <% end %>
   <% end %>
 
@@ -33,7 +33,7 @@
     <h3 class= "dashboard-subtitle">Past Gigs</h3>
     <div class="dashboard-pink-line-subtitle"></div>
     <% @bookings.past.each do |booking| %>
-     <%= render "shared/dashboard-card-past", booking: booking %>
+     <%= render "shared/artist-dashboard/dashboard-card-past", booking: booking %>
     <% end %>
   <% end %>
 

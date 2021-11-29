@@ -1,9 +1,9 @@
-<%= render "shared/show-banner", venue: @venue %>
+<%= render "shared/venue-show-banner", venue: @venue %>
 <div class="container">
   <% @venue.events.sort_by { |event| event.starts_at }.each_with_index do |event, ind| %>
 
     <button class="event-modal-button search-button" data-buttonId="<%= ind %>">
-      <%= event.starts_at %> until <%= event.ends_at %>
+      <%= event.starts_at.strftime('%^a') %>
     </button>
 
     <div class="event-modal" id="event-modal-<%= ind %>">
@@ -27,8 +27,6 @@
       </div>
     </div>
   <% end %>
-
-    <%# -----------------CARROUSEL------------------------ %>
 
   <%# ---------------- CARDS ----------------------------------------------------- %>
 </div>

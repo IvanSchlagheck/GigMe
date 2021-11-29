@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :messages
-  has_many :venues
+  has_one :venue
   has_many :bookings
   has_many :events, through: :bookings
   has_one :artist_profil
