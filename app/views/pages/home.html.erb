@@ -10,6 +10,7 @@
           <% if current_user %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "signuplogin" %>
             <%= link_to "My dashboard", dashboard_path, class: "signuplogin" %>
+
           <% end %>
         <div class="card-pink-line-navbar"></div>
         <div class="card-green-line-navbar"></div>
