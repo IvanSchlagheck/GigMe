@@ -29,15 +29,15 @@
   <% end %>
 
   <%# ------------------------------------CALENDAR------------------------------------------------------------ %>
-
   <%= week_calendar(events: @events, end_attribute: :end_time) do |date, events| %>
-    <%= date %>
-    <% events.each do |events| %>
-      <div class="event">
-        <p><%= event.name %></p>
-      </div>
-    <% end %>
-  <% end %>
+        <%= date %>
+        <% events.each do |events| %>
+          <div class="event">
+            <%= event.starts_at.strftime('%^a')%>
+          </div>
+        <% end %>
+      <% end %>
+
   <%# ---------------- CARDS ----------------------------------------------------- %>
 </div>
 
