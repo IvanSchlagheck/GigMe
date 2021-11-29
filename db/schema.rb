@@ -60,8 +60,8 @@ ActiveRecord::Schema.define(version: 2021_11_29_130911) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.date "starts_at"
-    t.date "ends_at"
+    t.date "start_time"
+    t.date "end_time"
     t.bigint "venue_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
