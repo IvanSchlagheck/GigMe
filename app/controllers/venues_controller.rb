@@ -5,6 +5,12 @@ class VenuesController < ApplicationController
     else
       @venues = Venue.all
     end
+    @markers = @venues.geocoded.map do |venue|
+      {
+        lat: venue.latitude,
+        lng: venue.longitude
+      }
+    end
   end
 
   def show

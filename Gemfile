@@ -63,3 +63,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Use cloudinary for picture upload
 gem 'cloudinary', '~> 1.16.0'
+
+# Use geocoder to display venue locations
+gem "geocoder"
