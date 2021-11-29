@@ -1,27 +1,53 @@
 <div class="container">
-  <h1>Host Dashboard</h1>
-  <% if @host_bookings.pending.size != 0 %>
-    <h3>Pending Gigs</h3>
-    <% @host_bookings.pending.each do |booking| %>
-      <div class="card">
-        <p><%= booking.user.username %></p>
-        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
-        <%= image_tag(booking.user.image_url, width: 200) %>
-        <%= link_to "Accept", booking_confirm_path(booking) %>
-        <%= link_to "Decline", booking_decline_path(booking) %>
-      </div>
-    <% end %>
-  <% end %>
+  <div class="dashboard-head-text">
+    <h1>Hello <%= current_user.venues.name.capitalize %>!</h1>
+    <div class="dashboard-green-line-header"></div>
+  </div>
 
-  <% if @host_bookings.confirmed.size != 0 %>
-    <h3>Upcoming Gigs</h3>
-    <% @host_bookings.confirmed.each do |booking| %>
-      <div class="card">
-        <p><%= booking.user.username %></p>
-        <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
-        <%= image_tag(booking.user.image_url, width: 200) %>
-      </div>
+
+    <% if @bookings.pending.size != 0 %>
+      <h3 class= "dashboard-subtitle">Pending Gigs</h3>
+      <div class="dashboard-pink-line-subtitle"></div>
+      <% @bookings.pending.each do |booking| %>
+        <%= render "shared/host-dashboard/dashboard-card-pending", booking: booking %>
+      <% end %>
     <% end %>
-  <% end %>
+
+    <% if @bookings.confirmed.size != 0 %>
+      <h3 class= "dashboard-subtitle">Confirmed Gigs</h3>
+      <div class="dashboard-pink-line-subtitle"></div>
+      <% @bookings.confirmed.each do |booking| %>
+        <%= render "shared/host-dashboard/dashboard-card-confirmed", booking: booking %>
+      <% end %>
+    <% end %>
+
+    <% if @bookings.rejected.size != 0 %>
+      <h3 class= "dashboard-subtitle">Rejected Gigs</h3>
+      <div class="dashboard-pink-line-subtitle"></div>
+      <% @bookings.rejected.each do |booking| %>
+        <%= render "shared/host-dashboard/dashboard-card-rejected", booking: booking %>
+      <% end %>
+    <% end %>
+
+    <% if @bookings.past.size != 0 %>
+      <h3 class= "dashboard-subtitle">Past Gigs</h3>
+      <div class="dashboard-pink-line-subtitle"></div>
+      <% @bookings.past.each do |booking| %>
+      <%= render "shared/host-dashboard/dashboard-card-past", booking: booking %>
+      <% end %>
+    <% end %>
+
+    <% if @bookings.messaging.size != 0 %>
+      <h3 class= "dashboard-subtitle">Messaging Giggers</h3>
+      <div class="dashboard-pink-line-subtitle"></div>
+      <% @bookings.messaging.each do |booking| %>
+        <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= booking.event.venue.image_url %>)">
+          <p><%= booking.event.venue.name %></p>
+          <p><%= booking.event.venue.address %></p>
+          <p><%= booking.event.starts_at %> - <%= booking.event.ends_at %></p>
+          <p><%= booking.status %></p>
+        </div>
+      <% end %>
+    <% end %>
 
 </div>

@@ -24,6 +24,7 @@ marc = User.new(
 marc.save!
 puts "created user #{marc.username}"
 
+
 ivan = User.new(
   username: 'ivan',
   email: 'ivan@gigme.com',
@@ -63,6 +64,20 @@ amelie = User.new(
 amelie.save!
 puts "created user #{amelie.username}"
 
+santi = User.new(
+  username: 'santi',
+  email: 'santi@gigme.com',
+  password: 'santi@gigme.com',
+  first_name: 'Santi',
+  last_name: 'The Champion',
+  phone_number: '015736589485',
+  status: "host",
+  # image_url: "/marc.jpg"
+)
+
+santi.save!
+puts "created user #{santi.username}"
+
 puts "Creating user finished!"
 
 
@@ -75,7 +90,7 @@ venue1 = Venue.new(
   image_url: "https://lh5.googleusercontent.com/p/AF1QipPLEIZw135hjAcoCJPiXOmcWUXiuxKRXC8y-bDD=w1080-k-no",
   address: "Selchower Str. 20, 12049",
   contact_details: "Mail: brauhausneulich@venues.com",
-  user_id: 1
+  user_id: 5
 )
 venue1.save!
 puts "Created #{venue1.name}"
