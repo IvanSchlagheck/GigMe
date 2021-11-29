@@ -3,7 +3,7 @@
   <% @venue.events.sort_by { |event| event.start_time }.each_with_index do |event, ind| %>
 
     <button class="event-modal-button search-button" data-buttonId="<%= ind %>">
-       <%# <%= event.starts_at.strftime('%^a') %>
+       <%# <%= event.start_time.strftime('%^a') %>
        <%= event.start_time %> until <%= event.end_time %>
     </button>
 
