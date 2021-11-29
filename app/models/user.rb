@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_one :artist_profil
   has_many :reviews_as_review_giver, class_name: "Review", foreign_key: :review_giver_id
   has_many :reviews_as_review_receiver, class_name: "Review", foreign_key: :review_receiver_id
+  has_one_attached :photo
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
