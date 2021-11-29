@@ -10,6 +10,7 @@
     <div class="event-modal" id="event-modal-<%= ind %>">
 
         <div class="event-modal-content">
+        <div class="event-modal-close" id="event-modal-close-<%= ind %>">&times;</div>
           <div class="popup-text">
            <div class="card-green-line-popup"></div>
               <%=  @venue.name %>
@@ -20,11 +21,11 @@
             <%= simple_form_for :booking, url: bookings_path do |f| %>
             <%= f.hidden_field :event, value: event.id %>
 
-            <%= f.input :content, as: :text, input_html: {class: 'text-box'}, placeholder: "Type a message here..." %>
+            <%= f.input :content, as: :text, input_html: {id: 'text-box'}, label: false, placeholder: "Type a message here..."%>
             <%= f.button :submit, class: 'submit-button'%>
 
     <% end %>
-        <span class="event-modal-close" id="event-modal-close-<%= ind %>">&times;</span>
+
       </div>
     </div>
   <% end %>
@@ -34,7 +35,7 @@
         <%= date %>
         <% events.each do |events| %>
           <div class="event">
-            <%= event.start_time.strftime('%^a')%>
+
           </div>
         <% end %>
       <% end %>
