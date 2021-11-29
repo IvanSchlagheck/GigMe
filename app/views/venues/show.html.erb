@@ -16,8 +16,10 @@
                 <%= @venue.address %>
               </div>
 
+
               <%= simple_form_for :booking, url: bookings_path do |f| %>
                 <%= f.hidden_field :event, value: event.id %>
+
 
                 <%= f.input :content, as: :text, input_html: {class: 'text-box'}, placeholder: "Type a message here..." %>
                 <%= f.button :submit, class: 'submit-button'%>
@@ -29,6 +31,7 @@
       <% end %>
     <% end %>
   <%# <% end %> %>
+
 </div>
 
 
