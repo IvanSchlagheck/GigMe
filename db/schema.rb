@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_11_29_100231) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -41,7 +42,7 @@ ActiveRecord::Schema.define(version: 2021_11_29_100231) do
     t.string "genre"
     t.string "instagram"
     t.string "bandcamp"
-    t.string "soudcloud"
+    t.string "soundcloud"
     t.string "youtube"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
