@@ -1,0 +1,36 @@
+.form-inputs {
+  margin: 0 auto;
+  position: relative;
+  color: white;
+}
+
+.form-actions {
+ color: white;
+}
+
+.form-group label {
+  color: white;
+  font-family: $inter;
+  letter-spacing: -0.05em;
+}
+
+.form-control {
+  margin: 0 auto;
+  border-radius: 50px;
+  width: 400px;
+}
+
+.register-container {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.bottom-links {
+  color: white;
+  font-family: $inter;
+  letter-spacing: -0.05em;
+}
+
+.bottom-links:hover {
+  color: $green;
+}

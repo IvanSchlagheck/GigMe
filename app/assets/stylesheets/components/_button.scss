@@ -36,5 +36,17 @@
   display: flex;
   align-items: center;
   margin-right: 30px;
+}
 
+.loginbutton {
+  background-color: #E500A4;
+  color: white;
+  font-size: large;
+  border-radius: 50px;
+  opacity: 1;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: $inter;
+  letter-spacing: -0.05em;
 }
