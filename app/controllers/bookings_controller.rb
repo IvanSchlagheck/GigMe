@@ -11,6 +11,14 @@ class BookingsController < ApplicationController
     @artist = User.find_by(id: @booking.user_id)
     @event = Event.find_by(id: @booking.event_id)
     @venue = Venue.find_by(id: @event.venue_id)
+    @venues = Venue.where(id: @event.venue_id)
+    @markers = @venues.geocoded.map do |venue|
+      {
+        lat: venue.latitude,
+        lng: venue.longitude,
+        info_window: render_to_string(partial: "./venues/info_window", locals: { venue: venue })
+      }
+    end
   end
 
   def create
