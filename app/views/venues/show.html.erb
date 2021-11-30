@@ -1,37 +1,6 @@
 <%= render "shared/venue-show-banner", venue: @venue %>
 <div class="container">
-<%# <%= turbo_frame_tag 'simple_form/week_calendar' do %> %>
-  <%= week_calendar(events: @events, attribute: :start_time, end_attribute: :end_time) do |date, events| %>
-      <%= date %>
-      <% events.each do |event| %>
-        <button class="event-modal-button search-button" data-buttonId="<%= event.id %>">
-          <%= event.start_time %> until <%= event.end_time %>
-        </button>
-        <div class="event-modal" id="event-modal-<%= event.id %>">
-          <div class="event-modal-content">
-            <div class="popup-text">
-            <div class="card-green-line-popup"></div>
-                <%=  @venue.name %>
-                <br>
-                <%= @venue.address %>
-              </div>
-
-
-              <%= simple_form_for :booking, url: bookings_path do |f| %>
-                <%= f.hidden_field :event, value: event.id %>
-
-
-                <%= f.input :content, as: :text, input_html: {class: 'text-box'}, placeholder: "Type a message here..." %>
-                <%= f.button :submit, class: 'submit-button'%>
-              <% end %>
-              <span class="event-modal-close" id="event-modal-close-<%= event.id %>">&times;</span>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
-  <%# <% end %> %>
-
+  <%= render "events/calendar", locals: {venue: @venue, events: @events} %>
 </div>
 
 
