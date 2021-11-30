@@ -1,11 +1,11 @@
 <%= render "shared/venue-show-banner", venue: @venue %>
 <div class="container">
-<%# <%= turbo_frame_tag 'simple_form/week_calendar' do %> %>
+<%# <%= turbo_frame_tag 'simple_form/week_calendar' do %>
   <%= week_calendar(events: @events, attribute: :start_time, end_attribute: :end_time) do |date, events| %>
       <%= date %>
       <% events.each do |event| %>
         <button class="event-modal-button search-button" data-buttonId="<%= event.id %>">
-          <%= event.start_time %> until <%= event.end_time %>
+          <%= event.start_time.strftime('%H') %>
         </button>
         <div class="event-modal" id="event-modal-<%= event.id %>">
           <div class="event-modal-content">
@@ -30,7 +30,7 @@
         </div>
       <% end %>
     <% end %>
-  <%# <% end %> %>
+  <%# <% end %>
 
 </div>
 
