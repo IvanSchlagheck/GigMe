@@ -1,4 +1,7 @@
 class EventsController < ApplicationController
+  def new
+    @event 0 Event.new
+  end
   def create
     @event = Event.new(event_params)
     @event.venue = current_user.venue
