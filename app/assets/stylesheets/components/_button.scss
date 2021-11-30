@@ -14,11 +14,23 @@
   display: flex;
   align-items: center;
   margin-right: 30px;
+  // flex-grow: 1;
+  padding: 0 2em;
+  letter-spacing: -0.05em;
+  line-height: 80px;
+  border: 0;
+  font-weight: 100;
+  transition: background-color 0.8s ease;
 }
 
+
 .search-button:hover {
+  background-color: #b80986;
+  border-color: #b80986;
   color: white;
+  text-decoration: none;
 }
+
 
 .submit-button {
   background-color: #E500A4;
@@ -36,7 +48,6 @@
   display: flex;
   align-items: center;
   margin-right: 3%;
-
 }
 
 .submit-button:hover {

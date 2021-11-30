@@ -89,28 +89,3 @@
 .text-in-search-bar {
   color: #ffffff;
 }
-
-.search-button-home {
-  display: inline-block;
-  flex-grow: 1;
-  height: 45px;
-  line-height: 80px;
-  padding: 0 2em;
-  text-align: center;
-  font-size: 1.2em;
-  font-weight: 100;
-  font-family: $inter;
-  letter-spacing: -0.05em;
-  border: 0;
-  border-radius: 19px;
-  color: white;
-  background-color: $pink;
-  transition: background-color 0.8s ease;
-}
-
-.search-button-home:hover {
-  background-color: #b80986;
-  border-color: #b80986;
-  color: white;
-  text-decoration: none;
-}
