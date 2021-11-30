@@ -1,37 +1,78 @@
 <%= render "shared/venue-show-banner", venue: @venue %>
 <div class="container">
+
   <%= render "events/calendar", locals: {venue: @venue, events: @events} %>
+
 </div>
 
 
 
 <div class="tabs">
   <div class="images-tab">
-    <h4>Images</h4>
-    <div class="arrow-down-pink"></div>
-    <div class="tab-green-line"></div>
-  </div>
+      <h4>
+        <a class="link-collapse" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Images
+        </a>
+      </h4>
+      <div class="arrow-down-pink"></div>
+      <div class="tab-green-line"></div>
+        <div class="collapse" id="collapseExample">
+          <div class="card-collapse">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
+        </div>
+    </div>
+
   <div class="tabs-right">
     <div class="about-tab">
       <div class="text-arrow d-flex justify-content">
-        <h4>About</h4>
+        <h4>
+          <a class="link-collapse" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            About
+          </a>
+        </h4>
         <div class="arrow-down-pink"></div>
       </div>
       <div class="tab-green-line"></div>
+        <div class="collapse" id="collapseExample">
+          <div class="card-collapse">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
+        </div>
     </div>
+
     <div class="reviews-tab">
       <div class="text-arrow d-flex justify-content">
-        <h4>Reviews</h4>
+        <h4>
+          <a class="link-collapse" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Reviews
+          </a>
+        </h4>
         <div class="arrow-down-green"></div>
       </div>
-      <div class="tab-pink-line"></div>
+        <div class="tab-pink-line"></div>
+            <div class="collapse" id="collapseExample">
+              <div class="card-collapse">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              </div>
+            </div>
     </div>
+
     <div class="requirements-tab">
       <div class="text-arrow d-flex justify-content">
-        <h4>Requirements</h4>
+        <h4>
+        <a class="link-collapse" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Requirements
+          </a>
+         </h4>
         <div class="arrow-down-pink"></div>
       </div>
       <div class="tab-green-line"></div>
+        <div class="collapse" id="collapseExample">
+              <div class="card-collapse">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              </div>
+            </div>
     </div>
   </div>
 </div>
