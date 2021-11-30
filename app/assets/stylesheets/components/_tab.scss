@@ -33,15 +33,17 @@
   }
 
   .arrow-down-pink {
+    position: relative;
+    z-index: 1;
+    // transition: transform 1s;
+    // transform-style: preserve-3d;
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 20px solid $pink;
-
-    position: relative;
-    z-index: 1;
   }
+
 
   .arrow-down-green {
     width: 0;
@@ -161,8 +163,8 @@
   position: absolute;
   width: 30%;
   height:fit-content;
-  right: 3%
-
+  right: 3%;
+  min-height: 300px;
 }
 
 .card-collapse-left {
