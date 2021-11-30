@@ -2,9 +2,9 @@
   <%= form_tag venues_path, method: :get do %>
     <div class="product-search">
       <div class="search-element">
-        <%= label_tag 'venue', "Choose a venue:", class: "search-label" %>
-        <%= text_field_tag :venue,
-          params[:venue],
+        <%= label_tag 'query', "Choose a venue:", class: "search-label" %>
+        <%= text_field_tag :query,
+          params[:query],
           class: "search-input",
           placeholder: "Find a venue"
         %>
