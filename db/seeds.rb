@@ -117,7 +117,9 @@ venue1 = Venue.new(
   name: "Brauhaus Neulich",
   address: "Selchower Str. 20, 12049 Berlin",
   contact_details: "Mail: brauhausneulich@venues.com",
-  user_id: 5
+  user_id: 5,
+  about: "nice location",
+  requirements: "everything you need is available"
 )
 venue1.photo.attach(io: file1, filename: 'brauhaus_neulich.png', content_type: 'image/png')
 venue1.save!
@@ -128,7 +130,9 @@ venue2 = Venue.new(
   name: "Fuks Bar",
   address: "Hobrechtstraße 64, 12047 Berlin",
   contact_details: "Mail: fuksbar@venues.com",
-  user_id: 6
+  user_id: 6,
+  about: "nice location",
+  requirements: "everything you need is available"
 )
 venue2.photo.attach(io: file2, filename: 'fuks_bar.png', content_type: 'image/png')
 venue2.save!
@@ -139,7 +143,9 @@ venue3 = Venue.new(
   name: "Rickenbacker’s Music-Inn",
   address: "Bundesallee 194B, 10717 Berlin",
   contact_details: "Mail: RickenbackersMusic-Inn@venues.com",
-  user_id: 7
+  user_id: 7,
+  about: "nice location",
+  requirements: "everything you need is available"
 )
 venue3.photo.attach(io: file3, filename: 'rickenbackers_music_inn.png', content_type: 'image/png')
 venue3.save!
@@ -150,7 +156,9 @@ venue4 = Venue.new(
   name: "Lyrik",
   address: "Kollwitzstraße 97, 10435 Berlin",
   contact_details: "Mail: Lyrik@venues.com",
-  user_id: 8
+  user_id: 8,
+  about: "nice location",
+  requirements: "everything you need is available"
 )
 venue4.photo.attach(io: file4, filename: 'lyrik.png', content_type: 'image/png')
 venue4.save!
@@ -161,7 +169,9 @@ venue5 = Venue.new(
   name: "Cassiopeia",
   address: "Revaler Str. 99, 10245 Berlin",
   contact_details: "Mail: Cassiopeia@venues.com",
-  user_id: 9
+  user_id: 9,
+  about: "nice location",
+  requirements: "everything you need is available"
 )
 venue5.photo.attach(io: file5, filename: 'cassiopeia.png', content_type: 'image/png')
 venue5.save!
@@ -172,7 +182,9 @@ venue6 = Venue.new(
   name: "The Hat Bar Berlin",
   address: "Lotte-Lenya-Bogen 550, 10623 Berlin",
   contact_details: "Mail: TheHatBarBerlin@venues.com",
-  user_id: 10
+  user_id: 10,
+  about: "nice location",
+  requirements: "everything you need is available"
 )
 venue6.photo.attach(io: file6, filename: 'the_hat.png', content_type: 'image/png')
 venue6.save!
@@ -183,7 +195,9 @@ venue7 = Venue.new(
   name: "Yorckschlösschen",
   address: "Yorckstraße 15, 10965 Berlin",
   contact_details: "Mail: Yorckschlösschen@venues.com",
-  user_id: 11
+  user_id: 11,
+  about: "nice location",
+  requirements: "everything you need is available"
 )
 venue7.photo.attach(io: file7, filename: 'yorckschloesschen.png', content_type: 'image/png')
 venue7.save!
@@ -194,7 +208,9 @@ venue8 = Venue.new(
   name: "Madame Claude",
   address: "Lübbener Str. 19, 10997 Berlin",
   contact_details: "Mail: MadameClaude@venues.com",
-  user_id: 12
+  user_id: 12,
+  about: "nice location",
+  requirements: "everything you need is available"
 )
 venue8.photo.attach(io: file8, filename: 'madame_claude.png', content_type: 'image/png')
 venue8.save!
@@ -205,7 +221,9 @@ venue9 = Venue.new(
   name: "Schokoladen",
   address: "Ackerstraße 169, 10115 Berlin",
   contact_details: "Mail: Schokoladen@venues.com",
-  user_id: 13
+  user_id: 13,
+  about: "nice location",
+  requirements: "everything you need is available"
 )
 venue9.photo.attach(io: file9, filename: 'schokoladen.png', content_type: 'image/png')
 venue9.save!
@@ -216,7 +234,9 @@ venue10 = Venue.new(
   name: "FairytaleBar",
   address: "Am Friedrichshain 24, 10407 Berlin",
   contact_details: "Mail: FairytaleBar@venues.com",
-  user_id: 14
+  user_id: 14,
+  about: "nice location",
+  requirements: "everything you need is available"
 )
 venue10.photo.attach(io: file10, filename: 'fairytale_bar.png', content_type: 'image/png')
 venue10.save!
@@ -227,7 +247,9 @@ venue11 = Venue.new(
   name: "Zig Zag Jazz Club Berlin",
   address: "Hauptstraße 89, 12159 Berlin",
   contact_details: "Mail: ZigZagJazzClubBerlin@venues.com",
-  user_id: 15
+  user_id: 15,
+  about: "nice location",
+  requirements: "everything you need is available"
 )
 venue11.photo.attach(io: file11, filename: 'zig_zag_jazz_club.png', content_type: 'image/png')
 venue11.save!
@@ -238,7 +260,9 @@ venue12 = Venue.new(
   name: "Bi Nuu",
   address: "U Schlesisches Tor",
   contact_details: "Mail: BiNuu@venues.com",
-  user_id: 16
+  user_id: 16,
+  about: "nice location",
+  requirements: "everything you need is available"
 )
 venue12.photo.attach(io: file12, filename: 'bi_nuu.png', content_type: 'image/png')
 venue12.save!
@@ -249,7 +273,9 @@ venue13 = Venue.new(
   name: "Eschschloraque",
   address: "Rosenthaler Str. 39 - 2, 10178 Berlin",
   contact_details: "Mail: Eschschloraque@venues.com",
-  user_id: 17
+  user_id: 17,
+  about: "nice location",
+  requirements: "everything you need is available"
 )
 venue13.photo.attach(io: file13, filename: 'eschschloraque.png', content_type: 'image/png')
 venue13.save!
@@ -260,7 +286,9 @@ venue14 = Venue.new(
   name: "Studio 8",
   address: "Grüntaler Str. 8, 13357 Berlin",
   contact_details: "Mail: Studio8@venues.com",
-  user_id: 18
+  user_id: 18,
+  about: "nice location",
+  requirements: "everything you need is available"
 )
 venue14.photo.attach(io: file14, filename: 'studio_8.png', content_type: 'image/png')
 venue14.save!
@@ -271,7 +299,9 @@ venue15 = Venue.new(
   name: "Sowieso",
   address: "Weisestraße 24, 12049 Berlin",
   contact_details: "Mail: Sowieso@venues.com",
-  user_id: 19
+  user_id: 19,
+  about: "nice location",
+  requirements: "everything you need is available"
 )
 venue15.photo.attach(io: file15, filename: 'sowieso.png', content_type: 'image/png')
 venue15.save!
@@ -282,7 +312,9 @@ venue16 = Venue.new(
   name: "Roadrunner's Paradise",
   address: "Saarbrücker Str. 24, 10405 Berlin",
   contact_details: "Mail: RoadrunnersParadise@venues.com",
-  user_id: 20
+  user_id: 20,
+  about: "nice location",
+  requirements: "everything you need is available"
 )
 venue16.photo.attach(io: file16, filename: 'roadrunners_paradise.png', content_type: 'image/png')
 venue16.save!
