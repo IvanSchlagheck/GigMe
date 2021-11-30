@@ -8,6 +8,9 @@ class BookingsController < ApplicationController
   def show
     @booking = Booking.find(params[:id])
     @message = Message.new
+    @artist = User.find_by(id: @booking.user_id)
+    @event = Event.find_by(id: @booking.event_id)
+    @venue = Venue.find_by(id: @event.venue_id)
   end
 
   def create
