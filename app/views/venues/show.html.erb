@@ -5,74 +5,79 @@
 
 </div>
 
-
-
-<div class="tabs">
-  <div class="images-tab">
-      <h4>
-        <a class="link-collapse" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Images
-        </a>
-      </h4>
-      <div class="arrow-down-pink"></div>
-      <div class="tab-green-line"></div>
-        <div class="collapse" id="collapseExample">
-          <div class="card-collapse">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+<div id="accordion">
+  <div class="tabs">
+    <div class="images-tab">
+      <div class="d-flex flex-column" style="width: 100%;">
+        <div class="d-flex align-items-center justify-content-end" style="margin-bottom: -26px;">
+          <div class="arrow-down-pink">
+          </div>
+          <h4 id="headingOne">
+            <a class="link-collapse" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne" data-target="#collapseOne">
+                Images
+            </a>
+          </h4>
+        </div>
+        <div class="tab-green-line"></div>
+        <div class="collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-collapse-left">
+            images
           </div>
         </div>
+      </div>
     </div>
 
-  <div class="tabs-right">
-    <div class="about-tab">
-      <div class="text-arrow d-flex justify-content">
-        <h4>
-          <a class="link-collapse" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            About
-          </a>
-        </h4>
-        <div class="arrow-down-pink"></div>
-      </div>
-      <div class="tab-green-line"></div>
-        <div class="collapse" id="collapseExample">
-          <div class="card-collapse">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-          </div>
+    <div class="tabs-right">
+      <div class="about-tab">
+        <div class="text-arrow d-flex justify-content">
+          <h4 id="headingTwo">
+            <a class="link-collapse" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo" data-target="#collapseTwo">
+              About
+            </a>
+          </h4>
+          <div class="arrow-down-pink"></div>
         </div>
-    </div>
-
-    <div class="reviews-tab">
-      <div class="text-arrow d-flex justify-content">
-        <h4>
-          <a class="link-collapse" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Reviews
-          </a>
-        </h4>
-        <div class="arrow-down-green"></div>
-      </div>
-        <div class="tab-pink-line"></div>
-            <div class="collapse" id="collapseExample">
-              <div class="card-collapse">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              </div>
+        <div class="tab-green-line"></div>
+          <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-collapse">
+              <%= @venue.about %>
             </div>
-    </div>
-
-    <div class="requirements-tab">
-      <div class="text-arrow d-flex justify-content">
-        <h4>
-        <a class="link-collapse" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Requirements
-          </a>
-         </h4>
-        <div class="arrow-down-pink"></div>
+          </div>
       </div>
-      <div class="tab-green-line"></div>
-        <div class="collapse" id="collapseExample">
-              <div class="card-collapse">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+
+      <div class="reviews-tab">
+        <div class="text-arrow d-flex justify-content">
+          <h4 id="headingThree">
+            <a class="link-collapse" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree" data-target="#collapseThree">
+              Reviews
+            </a>
+          </h4>
+          <div class="arrow-down-green"></div>
+        </div>
+          <div class="tab-pink-line"></div>
+              <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-collapse">
+                  <%= @venue.about %>
+                </div>
               </div>
-            </div>
+      </div>
+
+      <div class="requirements-tab">
+        <div class="text-arrow d-flex justify-content">
+          <h4 id="headingFour">
+          <a class="link-collapse" data-toggle="collapse" aria-expanded="false" aria-controls="collapseFour" data-target="#collapseFour">
+              Requirements
+            </a>
+          </h4>
+          <div class="arrow-down-pink"></div>
+        </div>
+        <div class="tab-green-line"></div>
+          <div class="collapse" id="collapseFour" aria-labelledby="headingFour" data-parent="#accordion">
+                <div class="card-collapse">
+                  <%= @venue.requirements %>
+                </div>
+              </div>
+      </div>
     </div>
   </div>
 </div>
