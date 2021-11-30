@@ -1,20 +1,32 @@
 <div>
-  <form action="/venues" method="get">
+  <%= form_tag venues_path, method: :get do %>
     <div class="product-search">
       <div class="search-element">
-        <label class="search-label">Choose a venue:</label>
-        <input class="search-input" type="text" autocomplete="on" name="venue">
+        <%= label_tag 'venue', "Choose a venue:", class: "search-label" %>
+        <%= text_field_tag :venue,
+          params[:venue],
+          class: "search-input",
+          placeholder: "Find a venue"
+        %>
       </div>
-      <%# <div class="search-element">
-        <label class="search-label">Select a city area</label>
-        <input class="search-input" type="text" class="text-in-search-bar" autocomplete="on" name="location">
+      <!-- <div class="search-element">
+        <%= label_tag 'radius', "Radius:", class: "search-label" %>
+        <%= text_field_tag :radius,
+          params[:radius],
+          class: "search-input",
+          placeholder: "- km"
+        %>
       </div>
       <div class="search-element">
-        <label class="search-label">-Km</label>
-        <input class="search-input" type="text" class="" autocomplete="on" name="location">
-      </div> %>
+        <%= label_tag 'date', "Choose a date:", class: "search-label" %>
+        <%= text_field_tag :date,
+          params[:date],
+          class: "search-input",
+          placeholder: "dd.mm.yyyy"
+        %>
+      </div> -->
       <div>
         <input type="submit" name="commit" value="GigMe!" class="search-button" data-disable-with="GigMe!" style= "line-height: 0;">
     </div>
-  </form>
+  <% end %>
 </div>

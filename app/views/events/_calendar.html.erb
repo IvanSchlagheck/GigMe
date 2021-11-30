@@ -10,6 +10,7 @@
       <div class="event-modal-content">
         <div class="popup-text">
         <div class="card-green-line-popup"></div>
+        <span class="event-modal-close" id="event-modal-close-<%= event.id %>">&times;</span>
             <%=  @venue.name %>
             <br>
             <%= @venue.address %>
@@ -20,10 +21,10 @@
             <%= f.hidden_field :event, value: event.id %>
 
 
-            <%= f.input :content, as: :text, input_html: {class: 'text-box'}, placeholder: "Type a message here..." %>
+            <%= f.input :content, label: false, as: :text, input_html: {id: 'text-box'}, placeholder: "Type a message here..." %>
             <%= f.button :submit, class: 'submit-button'%>
           <% end %>
-          <span class="event-modal-close" id="event-modal-close-<%= event.id %>">&times;</span>
+
         </div>
       </div>
     </div>
