@@ -21,3 +21,10 @@
       <%= f.submit "send" %>
     <% end %>
 </div>
+<div>
+<% if current_user.status == 'host' %>
+  <%= render 'booking_host' %>
+<% else %>
+  <%= render 'booking_artist' %>
+<% end %>
+</div>
