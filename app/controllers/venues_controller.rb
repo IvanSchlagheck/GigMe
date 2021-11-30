@@ -1,7 +1,8 @@
 class VenuesController < ApplicationController
   def index
-    if params[:venue].present?
-      @venues = Venue.where("name ILIKE ?", "%#{params[:venue]}%")
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR address ILIKE :query"
+      @venues = Venue.where(sql_query, query: "%#{params[:query]}%")
     else
       @venues = Venue.all
     end
@@ -18,7 +19,7 @@ class VenuesController < ApplicationController
     @venue = Venue.find(params[:id])
     start_date = params.fetch(:start_date, Date.today).to_date
     @events = Event.where(start_time: start_date.beginning_of_week..start_date.end_of_week)
-    
+
   end
 
   def new
