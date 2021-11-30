@@ -127,8 +127,8 @@ venue1 = Venue.new(
   address: "Selchower Str. 20, 12049 Berlin",
   contact_details: "Mail: brauhausneulich@venues.com",
   user_id: User.all[5].id,
-  about: "nice location",
-  requirements: "everything you need is available"
+  about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
+  requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
 venue1.photo.attach(io: file1, filename: 'brauhaus_neulich.png', content_type: 'image/png')
 venue1.save!
@@ -140,8 +140,8 @@ venue2 = Venue.new(
   address: "Hobrechtstraße 64, 12047 Berlin",
   contact_details: "Mail: fuksbar@venues.com",
   user_id: User.all[6].id,
-  about: "nice location",
-  requirements: "everything you need is available"
+  about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
+  requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
 venue2.photo.attach(io: file2, filename: 'fuks_bar.png', content_type: 'image/png')
 venue2.save!
@@ -153,8 +153,8 @@ venue3 = Venue.new(
   address: "Bundesallee 194B, 10717 Berlin",
   contact_details: "Mail: RickenbackersMusic-Inn@venues.com",
   user_id: User.all[7].id,
-  about: "nice location",
-  requirements: "everything you need is available"
+  about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
+  requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
 venue3.photo.attach(io: file3, filename: 'rickenbackers_music_inn.png', content_type: 'image/png')
 venue3.save!
@@ -166,8 +166,8 @@ venue4 = Venue.new(
   address: "Kollwitzstraße 97, 10435 Berlin",
   contact_details: "Mail: Lyrik@venues.com",
   user_id: User.all[8].id,
-  about: "nice location",
-  requirements: "everything you need is available"
+  about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
+  requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
 venue4.photo.attach(io: file4, filename: 'lyrik.png', content_type: 'image/png')
 venue4.save!
@@ -179,8 +179,8 @@ venue5 = Venue.new(
   address: "Revaler Str. 99, 10245 Berlin",
   contact_details: "Mail: Cassiopeia@venues.com",
   user_id: User.all[9].id,
-  about: "nice location",
-  requirements: "everything you need is available"
+  about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
+  requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
 venue5.photo.attach(io: file5, filename: 'cassiopeia.png', content_type: 'image/png')
 venue5.save!
@@ -192,8 +192,8 @@ venue6 = Venue.new(
   address: "Lotte-Lenya-Bogen 550, 10623 Berlin",
   contact_details: "Mail: TheHatBarBerlin@venues.com",
   user_id: User.all[10].id,
-  about: "nice location",
-  requirements: "everything you need is available"
+  about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
+  requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
 venue6.photo.attach(io: file6, filename: 'the_hat.png', content_type: 'image/png')
 venue6.save!
@@ -205,8 +205,8 @@ venue7 = Venue.new(
   address: "Yorckstraße 15, 10965 Berlin",
   contact_details: "Mail: Yorckschlösschen@venues.com",
   user_id: User.all[11].id,
-  about: "nice location",
-  requirements: "everything you need is available"
+  about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
+  requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
 venue7.photo.attach(io: file7, filename: 'yorckschloesschen.png', content_type: 'image/png')
 venue7.save!
@@ -218,8 +218,8 @@ venue8 = Venue.new(
   address: "Lübbener Str. 19, 10997 Berlin",
   contact_details: "Mail: MadameClaude@venues.com",
   user_id: User.all[12].id,
-  about: "nice location",
-  requirements: "everything you need is available"
+  about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
+  requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
 venue8.photo.attach(io: file8, filename: 'madame_claude.png', content_type: 'image/png')
 venue8.save!
@@ -231,8 +231,8 @@ venue9 = Venue.new(
   address: "Ackerstraße 169, 10115 Berlin",
   contact_details: "Mail: Schokoladen@venues.com",
   user_id: User.all[13].id,
-  about: "nice location",
-  requirements: "everything you need is available"
+  about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
+  requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
 venue9.photo.attach(io: file9, filename: 'schokoladen.png', content_type: 'image/png')
 venue9.save!
@@ -244,8 +244,8 @@ venue10 = Venue.new(
   address: "Am Friedrichshain 24, 10407 Berlin",
   contact_details: "Mail: FairytaleBar@venues.com",
   user_id: User.all[14].id,
-  about: "nice location",
-  requirements: "everything you need is available"
+  about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
+  requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
 venue10.photo.attach(io: file10, filename: 'fairytale_bar.png', content_type: 'image/png')
 venue10.save!
@@ -257,8 +257,8 @@ venue11 = Venue.new(
   address: "Hauptstraße 89, 12159 Berlin",
   contact_details: "Mail: ZigZagJazzClubBerlin@venues.com",
   user_id: User.all[15].id,
-  about: "nice location",
-  requirements: "everything you need is available"
+  about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
+  requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
 venue11.photo.attach(io: file11, filename: 'zig_zag_jazz_club.png', content_type: 'image/png')
 venue11.save!
@@ -270,8 +270,8 @@ venue12 = Venue.new(
   address: "U Schlesisches Tor, 10997 Berlin",
   contact_details: "Mail: BiNuu@venues.com",
   user_id: User.all[16].id,
-  about: "nice location",
-  requirements: "everything you need is available"
+  about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
+  requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
 venue12.photo.attach(io: file12, filename: 'bi_nuu.png', content_type: 'image/png')
 venue12.save!
@@ -283,8 +283,8 @@ venue13 = Venue.new(
   address: "Rosenthaler Str. 39 - 2, 10178 Berlin",
   contact_details: "Mail: Eschschloraque@venues.com",
   user_id: User.all[17].id,
-  about: "nice location",
-  requirements: "everything you need is available"
+  about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
+  requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
 venue13.photo.attach(io: file13, filename: 'eschschloraque.png', content_type: 'image/png')
 venue13.save!
@@ -296,8 +296,8 @@ venue14 = Venue.new(
   address: "Grüntaler Str. 8, 13357 Berlin",
   contact_details: "Mail: Studio8@venues.com",
   user_id: User.all[18].id,
-  about: "nice location",
-  requirements: "everything you need is available"
+  about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
+  requirements: "eWe have all the sound equipement but bring your instrument (we have a piano!)"
 )
 venue14.photo.attach(io: file14, filename: 'studio_8.png', content_type: 'image/png')
 venue14.save!
@@ -309,8 +309,8 @@ venue15 = Venue.new(
   address: "Weisestraße 24, 12049 Berlin",
   contact_details: "Mail: Sowieso@venues.com",
   user_id: User.all[19].id,
-  about: "nice location",
-  requirements: "everything you need is available"
+  about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
+  requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
 venue15.photo.attach(io: file15, filename: 'sowieso.png', content_type: 'image/png')
 venue15.save!
@@ -322,8 +322,8 @@ venue16 = Venue.new(
   address: "Saarbrücker Str. 24, 10405 Berlin",
   contact_details: "Mail: RoadrunnersParadise@venues.com",
   user_id: User.all[20].id,
-  about: "nice location",
-  requirements: "everything you need is available"
+  about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
+  requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
 venue16.photo.attach(io: file16, filename: 'roadrunners_paradise.png', content_type: 'image/png')
 venue16.save!
