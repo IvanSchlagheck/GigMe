@@ -1,0 +1,22 @@
+<%= @artist.username %>
+<p><%= @artist.first_name %> <%= @artist.last_name %></p>
+<%= @artist.phone_number %>
+<%= @artist.artist_profil.artistname %>
+<%= @artist.artist_profil.genre %>
+<div>
+<% if @artist.artist_profil.youtube %>
+    <%= link_to "Youtube", @artist.artist_profil.youtube, target:"_blank" %>
+<% end %>
+
+<% if @artist.artist_profil.instagram %>
+    <%= link_to "Instagram", @artist.artist_profil.instagram, target:"_blank" %>
+<% end %>
+<% if @artist.artist_profil.soundcloud %>
+    <%= link_to "Soundcloud", @artist.artist_profil.soundcloud, target:"_blank" %>
+<% end %>
+
+<% if @artist.artist_profil.bandcamp %>
+    <%= link_to "Bandcamp", @artist.artist_profil.bandkamp, target:"_blank" %>
+<% end %>
+</div>
+
