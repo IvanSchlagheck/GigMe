@@ -1,7 +1,8 @@
 class EventsController < ApplicationController
   def new
-    @event 0 Event.new
+    @event = Event.new
   end
+
   def create
     @event = Event.new(event_params)
     @event.venue = current_user.venue
@@ -17,4 +18,5 @@ class EventsController < ApplicationController
   def event_params
     params.require(:events).permit(:start_time, :end_time)
   end
+
 end
