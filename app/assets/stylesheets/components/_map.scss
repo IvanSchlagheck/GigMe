@@ -7,9 +7,34 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.mapboxgl-ctrl-geocoder--input {
+  margin: 0 auto;
+  border-radius: 50px;
+  width: 400px;
+  height: calc(1.5em + 0.75rem + 2px);
+}
+
 #map {
   width: 50%;
   height: 100vh;
   position: sticky;
   top: 0;
+}
+
+.venue_address {
+  svg {
+    display: none;
+  }
+  .suggestions-wrapper {
+    display: none;
+  }
+  .mapboxgl-ctrl-geocoder--button {
+    display: none;
+  }
+  .mapboxgl-ctrl-geocoder {
+    text-align: center;
+  }
+  button {
+    display: none;
+  }
 }
