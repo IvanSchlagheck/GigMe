@@ -90,27 +90,27 @@
   color: #ffffff;
 }
 
-.search-button {
+.search-button-home {
   display: inline-block;
   flex-grow: 1;
-  height: 80px;
+  height: 45px;
   line-height: 80px;
   padding: 0 2em;
   text-align: center;
   font-size: 1.2em;
   font-weight: 100;
   font-family: $inter;
+  letter-spacing: -0.05em;
   border: 0;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 19px;
   color: white;
-  background-color: tomato;
+  background-color: $pink;
   transition: background-color 0.8s ease;
 }
 
-.search-button:hover {
-  background-color: HSLA(345, 100%, 60%, 1.00);
+.search-button-home:hover {
+  background-color: #b80986;
+  border-color: #b80986;
+  color: white;
   text-decoration: none;
 }

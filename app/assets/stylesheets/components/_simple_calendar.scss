@@ -1,5 +1,4 @@
 .simple-calendar {
-
   margin-top: 5%;
   table {
     min-height: 30vh;
@@ -31,10 +30,10 @@
   display: flex;
   justify-content: center;
   button {
-    .button-text {
+    #button-text {
       padding-top: 20%;
       margin-bottom: 1rem;
-      padding-left: 22%;
+      padding-left: 20%;
       font-family: $sora;
     }
   }
@@ -43,6 +42,24 @@
     border-color: #b80986;
     color: white;
   }
+}
+
+.search-button2 {
+  background-color: #E500A4;
+  color: white;
+  font-size: large;
+  font-family: 'Inter', sans-serif;
+  border-radius: 50px;
+  opacity: 1;
+  position: relative;
+  margin-top: -6px;
+  margin: 12px;
+  display: block;
+  height: 47px;
+  text-align: justify;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
 }
 
 
