@@ -1,50 +1,7 @@
 <%= render "shared/venue-show-banner", venue: @venue %>
 <div class="container">
- <%= week_calendar(events: @events, attribute: :start_time, end_attribute: :end_time) do |date, events| %>
-    <%= date %>
-    <% events.each do |event| %>
-      <button class="event-modal-button search-button" data-buttonId="<%= event.id %>">
-        <%= event.start_time %> until <%= event.end_time %>
-      </button>
-      <div class="event-modal" id="event-modal-<%= event.id %>">
-        <div class="event-modal-content">
-        <div class="event-modal-close" id="event-modal-close-<%= event.id %>">&times;</div>
-          <div class="popup-text">
-           <div class="card-green-line-popup"></div>
-              <%=  @venue.name %>
-              <br>
-              <%= @venue.address %>
-            </div>
-
-            <%= simple_form_for :booking, url: bookings_path do |f| %>
-              <%= f.hidden_field :event, value: event.id %>
-
-
-              <%= f.input :content, as: :text, input_html: {id: 'text-box'}, label: false, placeholder: "Type a message here..."%>
-              <%= f.button :submit, class: 'submit-button'%>
-            <% end %>
-    <% end %>
-          </div>
-        </div>
-  <% end %>
-
-
-  <%# ------------------------------------CALENDAR------------------------------------------------------------ %>
-  <%= week_calendar(events: @events) do |date, events| %>
-        <%= date %>
-        <% events.each do |events| %>
-          <div class="event">
-
-          </div>
-        <% end %>
-      <% end %>
-
-  <%# ---------------- CARDS ----------------------------------------------------- %>
-
+  <%= render "events/calendar", locals: {venue: @venue, events: @events} %>
 </div>
-
-
-
 <div id="accordion">
   <div class="tabs">
     <div class="images-tab">

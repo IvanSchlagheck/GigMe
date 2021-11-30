@@ -1,9 +1,9 @@
 <% if @venue.photo.attached? %>
-  <div class="banner-show" style= "background-image: url('<%= cl_image_path @venue.photo.key %>')">
+  <div class="banner-show" style= "background-image: url('<%= cl_image_path @venue.photo.key %>');">
     <div class="container banner-text my-5">
       <h1><%= @venue.name %></h1>
-      <div class="banner-green-line"></div>
       <h2><%= @venue.address %></h2>
     </div>
+    <div class="banner-green-line" data-aos="fade-right" data-aos-duration="1750"></div>
   </div>
 <% end %>
