@@ -258,7 +258,7 @@ puts "Created #{venue11.name}"
 file12 = URI.open("https://www.theclubmap.com/wp-content/uploads/2013/05/Bi-Nuu-4.jpg")
 venue12 = Venue.new(
   name: "Bi Nuu",
-  address: "U Schlesisches Tor",
+  address: "U Schlesisches Tor, 10997 Berlin",
   contact_details: "Mail: BiNuu@venues.com",
   user_id: 16,
   about: "nice location",
