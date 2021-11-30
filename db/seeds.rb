@@ -8,6 +8,15 @@
 require 'faker'
 require "open-uri"
 
+puts 'cleaning database...'
+Message.destroy_all
+Booking.destroy_all
+Event.destroy_all
+Venue.destroy_all
+ArtistProfil.destroy_all
+User.destroy_all
+
+
 # Creating USER seeds
 
 puts 'Creating users...'
@@ -117,7 +126,7 @@ venue1 = Venue.new(
   name: "Brauhaus Neulich",
   address: "Selchower Str. 20, 12049 Berlin",
   contact_details: "Mail: brauhausneulich@venues.com",
-  user_id: 5,
+  user_id: User.all[5].id,
   about: "nice location",
   requirements: "everything you need is available"
 )
@@ -130,7 +139,7 @@ venue2 = Venue.new(
   name: "Fuks Bar",
   address: "Hobrechtstraße 64, 12047 Berlin",
   contact_details: "Mail: fuksbar@venues.com",
-  user_id: 6,
+  user_id: User.all[6].id,
   about: "nice location",
   requirements: "everything you need is available"
 )
@@ -143,7 +152,7 @@ venue3 = Venue.new(
   name: "Rickenbacker’s Music-Inn",
   address: "Bundesallee 194B, 10717 Berlin",
   contact_details: "Mail: RickenbackersMusic-Inn@venues.com",
-  user_id: 7,
+  user_id: User.all[7].id,
   about: "nice location",
   requirements: "everything you need is available"
 )
@@ -156,7 +165,7 @@ venue4 = Venue.new(
   name: "Lyrik",
   address: "Kollwitzstraße 97, 10435 Berlin",
   contact_details: "Mail: Lyrik@venues.com",
-  user_id: 8,
+  user_id: User.all[8].id,
   about: "nice location",
   requirements: "everything you need is available"
 )
@@ -169,7 +178,7 @@ venue5 = Venue.new(
   name: "Cassiopeia",
   address: "Revaler Str. 99, 10245 Berlin",
   contact_details: "Mail: Cassiopeia@venues.com",
-  user_id: 9,
+  user_id: User.all[9].id,
   about: "nice location",
   requirements: "everything you need is available"
 )
@@ -182,7 +191,7 @@ venue6 = Venue.new(
   name: "The Hat Bar Berlin",
   address: "Lotte-Lenya-Bogen 550, 10623 Berlin",
   contact_details: "Mail: TheHatBarBerlin@venues.com",
-  user_id: 10,
+  user_id: User.all[10].id,
   about: "nice location",
   requirements: "everything you need is available"
 )
@@ -195,7 +204,7 @@ venue7 = Venue.new(
   name: "Yorckschlösschen",
   address: "Yorckstraße 15, 10965 Berlin",
   contact_details: "Mail: Yorckschlösschen@venues.com",
-  user_id: 11,
+  user_id: User.all[11].id,
   about: "nice location",
   requirements: "everything you need is available"
 )
@@ -208,7 +217,7 @@ venue8 = Venue.new(
   name: "Madame Claude",
   address: "Lübbener Str. 19, 10997 Berlin",
   contact_details: "Mail: MadameClaude@venues.com",
-  user_id: 12,
+  user_id: User.all[12].id,
   about: "nice location",
   requirements: "everything you need is available"
 )
@@ -221,7 +230,7 @@ venue9 = Venue.new(
   name: "Schokoladen",
   address: "Ackerstraße 169, 10115 Berlin",
   contact_details: "Mail: Schokoladen@venues.com",
-  user_id: 13,
+  user_id: User.all[13].id,
   about: "nice location",
   requirements: "everything you need is available"
 )
@@ -234,7 +243,7 @@ venue10 = Venue.new(
   name: "FairytaleBar",
   address: "Am Friedrichshain 24, 10407 Berlin",
   contact_details: "Mail: FairytaleBar@venues.com",
-  user_id: 14,
+  user_id: User.all[14].id,
   about: "nice location",
   requirements: "everything you need is available"
 )
@@ -247,7 +256,7 @@ venue11 = Venue.new(
   name: "Zig Zag Jazz Club Berlin",
   address: "Hauptstraße 89, 12159 Berlin",
   contact_details: "Mail: ZigZagJazzClubBerlin@venues.com",
-  user_id: 15,
+  user_id: User.all[15].id,
   about: "nice location",
   requirements: "everything you need is available"
 )
@@ -260,7 +269,7 @@ venue12 = Venue.new(
   name: "Bi Nuu",
   address: "U Schlesisches Tor",
   contact_details: "Mail: BiNuu@venues.com",
-  user_id: 16,
+  user_id: User.all[16].id,
   about: "nice location",
   requirements: "everything you need is available"
 )
@@ -273,7 +282,7 @@ venue13 = Venue.new(
   name: "Eschschloraque",
   address: "Rosenthaler Str. 39 - 2, 10178 Berlin",
   contact_details: "Mail: Eschschloraque@venues.com",
-  user_id: 17,
+  user_id: User.all[17].id,
   about: "nice location",
   requirements: "everything you need is available"
 )
@@ -286,7 +295,7 @@ venue14 = Venue.new(
   name: "Studio 8",
   address: "Grüntaler Str. 8, 13357 Berlin",
   contact_details: "Mail: Studio8@venues.com",
-  user_id: 18,
+  user_id: User.all[18].id,
   about: "nice location",
   requirements: "everything you need is available"
 )
@@ -299,7 +308,7 @@ venue15 = Venue.new(
   name: "Sowieso",
   address: "Weisestraße 24, 12049 Berlin",
   contact_details: "Mail: Sowieso@venues.com",
-  user_id: 19,
+  user_id: User.all[19].id,
   about: "nice location",
   requirements: "everything you need is available"
 )
@@ -312,7 +321,7 @@ venue16 = Venue.new(
   name: "Roadrunner's Paradise",
   address: "Saarbrücker Str. 24, 10405 Berlin",
   contact_details: "Mail: RoadrunnersParadise@venues.com",
-  user_id: 20,
+  user_id: User.all[20].id,
   about: "nice location",
   requirements: "everything you need is available"
 )
@@ -330,7 +339,7 @@ date = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
 event1 = Event.new(
   start_time: date,
   end_time: date + 1,
-  venue_id: 1
+  venue_id: Venue.all[1].id
 )
 event1.save!
 puts "Created event1"
@@ -338,7 +347,7 @@ date2 = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
 event2 = Event.new(
   start_time: date2,
   end_time: date2 + 1,
-  venue_id: 1
+  venue_id: Venue.all[1].id
 )
 event2.save!
 puts "Created event2"
@@ -346,7 +355,7 @@ date3 = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
 event3 = Event.new(
   start_time: date3,
   end_time: date3 + 1,
-  venue_id: 1
+  venue_id: Venue.all[1].id
 )
 event3.save!
 puts "Created event3"
@@ -354,7 +363,7 @@ date = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
 event4 = Event.new(
   start_time: date,
   end_time: date + 1,
-  venue_id: 1
+  venue_id: Venue.all[1].id
 )
 event4.save!
 puts "Created event4"
@@ -364,7 +373,7 @@ puts "Created event4"
   event = Event.new(
   start_time: date,
   end_time: date + 1,
-  venue_id: rand(2..16)
+  venue_id: Venue.all.sample.id
 )
 event.save!
 end
@@ -377,32 +386,32 @@ puts 'Creating bookings...'
 
 booking1 = Booking.new(
   status: 0,
-  user_id: 2,
-  event_id: 1
+  user_id: User.all[2].id,
+  event_id: Event.all[1].id
 )
 booking1.save!
 puts "Created booking1"
 
 booking2 = Booking.new(
   status: 1,
-  user_id: 2,
-  event_id: 2
+  user_id: User.all[2].id,
+  event_id: Event.all[2].id
 )
 booking2.save!
 puts "Created booking2"
 
 booking3 = Booking.new(
   status: 2,
-  user_id: 2,
-  event_id: 3
+  user_id: User.all[2].id,
+  event_id: Event.all[3].id
 )
 booking3.save!
 puts "Created booking3"
 
 booking4 = Booking.new(
   status: 3,
-  user_id: 2,
-  event_id: 4
+  user_id: User.all[2].id,
+  event_id: Event.all[4].id
 )
 booking4.save!
 puts "Created booking4"
@@ -410,7 +419,7 @@ puts "Created booking4"
 puts "Creating ArtistProfils"
 
 ap1 = ArtistProfil.new(
-  user_id: 2,
+  user_id: User.all[2].id,
   youtube: "https://www.youtube.com/user/rihanna",
   soundcloud: "https://soundcloud.com/rhiannaofficial"
 )
@@ -418,7 +427,7 @@ ap1.save!
 puts "ap1 created"
 
 ap2 = ArtistProfil.new(
-  user_id: 4,
+  user_id: User.all[4].id,
   youtube: "https://www.youtube.com/channel/UCehQT6NHMZjl0giIfY7f1mw",
   soundcloud: "https://soundcloud.com/edith-piaf-official"
 )
@@ -426,7 +435,7 @@ ap2.save
 puts "ap2 created"
 
 ap3 = ArtistProfil.new(
-  user_id: 3,
+  user_id: User.all[3].id,
   youtube: "https://www.youtube.com/c/marilynmanson",
   soundcloud: "https://soundcloud.com/marilynmanson"
 )
