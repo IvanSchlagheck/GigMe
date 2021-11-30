@@ -33,15 +33,16 @@
     line-height: 49px;
     letter-spacing: -0.05em;
     transform: translate(-5%, 464%);
+    margin-top: 2.5%;
   }
 }
 
 .banner-green-line {
-  width: 77%;
+  width: 45%;
+  position: absolute;
   height: 22px;
   background-color: $green;
-  transform: translate(-48%, 1056%);
-  z-index: -1;
+  top: 68%;
 }
 
 #artist-image {
