@@ -35,7 +35,14 @@
   text-align: justify;
   display: flex;
   align-items: center;
-  margin-right: 30px;
+  margin-right: 3%;
+
+}
+
+.submit-button:hover {
+background-color: $green;
+color: white;
+
 }
 
 .loginbutton {

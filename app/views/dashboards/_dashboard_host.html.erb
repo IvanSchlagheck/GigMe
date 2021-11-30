@@ -3,7 +3,9 @@
     <h1>Hello <%= current_user.first_name %>!</h1>
     <div class="dashboard-green-line-header"></div>
   </div>
-
+  <div>
+  <button><%= link_to 'New event for your Venue', new_venue_event_path(current_user.venue.id) unless current_user.venue.nil? %></button>
+  </div>
 
     <% if @bookings.pending.size != 0 %>
       <h3 class= "dashboard-subtitle">Pending Gigs</h3>

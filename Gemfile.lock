@@ -116,6 +116,8 @@ GEM
       domain_name (~> 0.5)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
+    importmap-rails (0.9.1)
+      rails (>= 6.0.0)
     jbuilder (2.11.3)
       activesupport (>= 5.0.0)
     listen (3.7.0)
@@ -235,6 +237,8 @@ GEM
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    turbo-rails (0.9.0)
+      rails (>= 6.0.0)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -280,6 +284,7 @@ DEPENDENCIES
   faker!
   font-awesome-sass
   geocoder
+  importmap-rails
   jbuilder (~> 2.7)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
@@ -294,6 +299,7 @@ DEPENDENCIES
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
+  turbo-rails
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)

@@ -1,12 +1,12 @@
 
 
 
-<div class="card-pink-line-home1" style="color:white; top:20%; margin-left:50px;">
+<div class="card-pink-line-home1" style="color:white; top:15%; margin-left:5%; z-index:1">
 <h1>Your Booking</h1>
 <%= @booking.event.start_time %>
 <%= @booking.event.end_time %>
 </div>
-<div class="chatroom card">
+<div class="chatroom card" style="margin-left:5%; margin-top:10%">
   <div style="background-color:grey;"
   data-controller="booking-subscription"
   data-booking-subscription-booking-id-value="<%= @booking.id %>"
@@ -20,4 +20,11 @@
       <%= f.input :content, label: false, placeholder: "#Your Message#" %>
       <%= f.submit "send" %>
     <% end %>
+</div>
+<div>
+<% if current_user.status == 'host' %>
+  <%= render 'booking_host' %>
+<% else %>
+  <%= render 'booking_artist' %>
+<% end %>
 </div>

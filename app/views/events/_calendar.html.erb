@@ -1,0 +1,32 @@
+<%= week_calendar(events: @events, attribute: :start_time, end_attribute: :end_time, previous_link: events_ajax_previous_link, next_link: events_ajax_next_link) do |date, events| %>
+  <%= date %>
+  <% events.each do |event| %>
+    <div class="button-calendar">
+      <button class="event-modal-button search-button" data-buttonId="<%= event.id %>">
+        <p id="button-text"><%= event.start_time.strftime('%H:%M') %></p>
+      </button>
+    </div>
+    <div class="event-modal" id="event-modal-<%= event.id %>">
+      <div class="event-modal-content">
+        <div class="popup-text">
+        <div class="card-green-line-popup"></div>
+        <span class="event-modal-close" id="event-modal-close-<%= event.id %>">&times;</span>
+            <%=  @venue.name %>
+            <br>
+            <%= @venue.address %>
+          </div>
+
+
+          <%= simple_form_for :booking, url: bookings_path do |f| %>
+            <%= f.hidden_field :event, value: event.id %>
+
+
+            <%= f.input :content, label: false, as: :text, input_html: {id: 'text-box'}, placeholder: "Type a message here..." %>
+            <%= f.button :submit, class: 'submit-button'%>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>
