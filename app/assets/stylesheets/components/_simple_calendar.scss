@@ -3,7 +3,7 @@
     min-height: 30vh;
   }
   .today {
-    background-color: #FAF3DD;
+    background-color: $pink;
   }
 }
 
@@ -22,6 +22,15 @@
 
 .table {
   color: white;
+}
+
+.button-calendar {
+  display: flex;
+  justify-content: center;
+}
+
+.button-text {
+  text-align: center;
 }
 
 .btn-pink {
