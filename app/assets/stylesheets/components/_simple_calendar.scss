@@ -1,6 +1,9 @@
 .simple-calendar {
+
+  margin-top: 5%;
   table {
     min-height: 30vh;
+    border-radius: 20px;
   }
   .today {
     background-color: $pink;
@@ -27,11 +30,21 @@
 .button-calendar {
   display: flex;
   justify-content: center;
+  button {
+    .button-text {
+      padding-top: 20%;
+      margin-bottom: 1rem;
+      padding-left: 22%;
+      font-family: $sora;
+    }
+  }
+  button:hover {
+    background-color: #b80986;
+    border-color: #b80986;
+    color: white;
+  }
 }
 
-.button-text {
-  text-align: center;
-}
 
 .btn-pink {
   color: #fff;
