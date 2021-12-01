@@ -76,8 +76,12 @@ color: white;
   border-radius: 50px;
   opacity: 1;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
   font-family: $inter;
   letter-spacing: -0.05em;
+  margin: 50px auto 20px auto;
+}
+
+.create-event-button:hover {
+  color: white;
+  background-color: $green;
 }
