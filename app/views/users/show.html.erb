@@ -1,42 +1,75 @@
 <%= render "shared/artist-show-banner", user: @user %>
-<div class="tabs">
 
-      <div class="images-tab">
-          <h4>Images</h4>
+
+<div id="accordion">
+  <div class="tabs">
+    <div class="">
+      <img src="https://lastfm.freetls.fastly.net/i/u/ar0/7a075ff9241544d2b85225ec4093fca7.jpg" alt="" id="image-user-page1">
+      <img src="https://lastfm.freetls.fastly.net/i/u/770x0/4e5c8762523843988a586282aa54e9e1.jpg" alt="alternatetext" id="image-user-page2" >
+      <iframe width="420" height="315"src="https://www.youtube.com/watch?v=w5vgn8_WjUE" id="user-video"></iframe>
+    </div>
+
+    <div class="tabs-right">
+      <div class="about-tab">
+        <div class="text-arrow d-flex justify-content">
+          <h4 id="headingTwo">
+            <a class="link-collapse" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo" data-target="#collapseTwo">
+              About
+            </a>
+          </h4>
           <div class="arrow-down-pink"></div>
-          <div class="tab-green-line"></div>
-
+        </div>
+        <div class="tab-green-line"></div>
+          <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-collapse">
+              user about
+            </div>
+          </div>
       </div>
 
-
-
-      <div class="tabs-right">
-        <div class="about-tab">
-          <div class="text-arrow d-flex justify-content">
-            <h4>About</h4>
-            <div class="arrow-down-pink"></div>
-          </div>
-          <div class="tab-green-line"></div>
+      <div class="reviews-tab">
+        <div class="text-arrow d-flex justify-content">
+          <h4 id="headingThree">
+            <a class="link-collapse" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree" data-target="#collapseThree">
+              Media
+            </a>
+          </h4>
+          <div class="arrow-down-green"></div>
         </div>
-
-
-        <div class="reviews-tab">
-          <div class="text-arrow d-flex justify-content">
-            <h4>Reviews</h4>
-            <div class="arrow-down-green"></div>
-          </div>
           <div class="tab-pink-line"></div>
+              <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-collapse">
+                Instagram
+                <br>
+                Soundcloud
+                <br>
+                Youtube
+                <br>
+                Bandcamp
+                <br>
+                Phone number:
+                <br>
+                <%= @user.phone_number %>
+                </div>
+              </div>
+      </div>
+
+      <div class="requirements-tab">
+        <div class="text-arrow d-flex justify-content">
+          <h4 id="headingFour">
+          <a class="link-collapse" data-toggle="collapse" aria-expanded="false" aria-controls="collapseFour" data-target="#collapseFour">
+              Requirements
+            </a>
+          </h4>
+          <div class="arrow-down-pink"></div>
         </div>
+        <div class="tab-green-line"></div>
+          <div class="collapse" id="collapseFour" aria-labelledby="headingFour" data-parent="#accordion">
+                <div class="card-collapse">
 
-
-
-        <div class="requirements-tab">
-          <div class="text-arrow d-flex justify-content">
-            <h4>Requirements</h4>
-            <div class="arrow-down-pink"></div>
-          </div>
-          <div class="tab-green-line"></div>
-        </div>
-
+                </div>
+              </div>
+      </div>
+    </div>
   </div>
 </div>
