@@ -419,7 +419,7 @@ puts "Created booking4"
 puts "Creating ArtistProfils"
 
 ap1 = ArtistProfil.new(
-  user_id: User.all[2].id,
+  user_id: User.all[1].id,
   youtube: "https://www.youtube.com/user/rihanna",
   soundcloud: "https://soundcloud.com/rhiannaofficial"
 )
@@ -427,7 +427,7 @@ ap1.save!
 puts "ap1 created"
 
 ap2 = ArtistProfil.new(
-  user_id: User.all[4].id,
+  user_id: User.all[3].id,
   youtube: "https://www.youtube.com/channel/UCehQT6NHMZjl0giIfY7f1mw",
   soundcloud: "https://soundcloud.com/edith-piaf-official"
 )
@@ -435,7 +435,7 @@ ap2.save
 puts "ap2 created"
 
 ap3 = ArtistProfil.new(
-  user_id: User.all[3].id,
+  user_id: User.all[2].id,
   youtube: "https://www.youtube.com/c/marilynmanson",
   soundcloud: "https://soundcloud.com/marilynmanson"
 )
