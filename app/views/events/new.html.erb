@@ -2,7 +2,5 @@
 <%= simple_form_for(@event, method: :post, url: venue_events_path) do |f| %>
 <%= f.input :start_time %>
 <%= f.input :end_time %>
-<%= f.input :gig_start %>
-<%= f.input :gig_end %>
 <%= f.submit %>
 <% end %>
