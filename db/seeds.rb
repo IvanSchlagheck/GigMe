@@ -335,11 +335,11 @@ puts "Creating venues finished!"
 
 puts 'Creating events...'
 
-date = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
+date = Faker::Date.between(from: '2021-12-06', to: '2021-12-10')
 event1 = Event.new(
   start_time: date,
   end_time: date + 1,
-  venue_id: Venue.all[1].id
+  venue_id: Venue.all[0].id
 )
 event1.save!
 puts "Created event1"
