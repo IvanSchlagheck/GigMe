@@ -22,11 +22,12 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @event = Event.find(params[:event_id])
     @booking = Booking.new
     @message = Message.new(booking_params)
     @booking.user = current_user
     @booking.status = 0
-    @booking.event_id = params[:booking][:event]
+    @booking.event = @event
     @message.user = current_user
     if @booking.save
       @message.booking_id = @booking.id
