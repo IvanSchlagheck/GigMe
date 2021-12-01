@@ -7,42 +7,42 @@
     <%= render "shared/host-dashboard/dashboard-button-create-event" %>
   <% end %>
 
-    <% if @bookings.pending.size != 0 %>
+    <% if @host_bookings.pending.size != 0 %>
       <h3 class= "dashboard-subtitle">Pending Gigs</h3>
       <div class="dashboard-pink-line-subtitle"></div>
-      <% @bookings.pending.each do |booking| %>
+      <% @host_bookings.pending.each do |booking| %>
         <%= render "shared/host-dashboard/dashboard-card-pending", booking: booking %>
       <% end %>
     <% end %>
 
-    <% if @bookings.confirmed.size != 0 %>
+    <% if @host_bookings.confirmed.size != 0 %>
       <h3 class= "dashboard-subtitle">Confirmed Gigs</h3>
       <div class="dashboard-pink-line-subtitle"></div>
-      <% @bookings.confirmed.each do |booking| %>
+      <% @host_bookings.confirmed.each do |booking| %>
         <%= render "shared/host-dashboard/dashboard-card-confirmed", booking: booking %>
       <% end %>
     <% end %>
 
-    <% if @bookings.rejected.size != 0 %>
+    <% if @host_bookings.rejected.size != 0 %>
       <h3 class= "dashboard-subtitle">Rejected Gigs</h3>
       <div class="dashboard-pink-line-subtitle"></div>
-      <% @bookings.rejected.each do |booking| %>
+      <% @host_bookings.rejected.each do |booking| %>
         <%= render "shared/host-dashboard/dashboard-card-rejected", booking: booking %>
       <% end %>
     <% end %>
 
-    <% if @bookings.past.size != 0 %>
+    <% if @host_bookings.past.size != 0 %>
       <h3 class= "dashboard-subtitle">Past Gigs</h3>
       <div class="dashboard-pink-line-subtitle"></div>
-      <% @bookings.past.each do |booking| %>
+      <% @host_bookings.past.each do |booking| %>
       <%= render "shared/host-dashboard/dashboard-card-past", booking: booking %>
       <% end %>
     <% end %>
 
-    <% if @bookings.messaging.size != 0 %>
+    <% if @host_bookings.messaging.size != 0 %>
       <h3 class= "dashboard-subtitle">Messaging Giggers</h3>
       <div class="dashboard-pink-line-subtitle"></div>
-      <% @bookings.messaging.each do |booking| %>
+      <% @host_bookings.messaging.each do |booking| %>
         <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= booking.event.venue.image_url %>)">
           <p><%= booking.event.venue.name %></p>
           <p><%= booking.event.venue.address %></p>
