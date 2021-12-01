@@ -193,3 +193,30 @@ a {
   width: 145px;
   height: 130px;
  }
+
+ .user-variables {
+   font-size: small;
+ }
+
+ #image-user-page1 {
+  margin: 3%;
+  border-radius: 30px;
+  width: 600px;
+  height: 350px;
+  position: center;
+ }
+
+ #image-user-page2 {
+  margin: 3%;
+  border-radius: 30px;
+  width: 900px;
+  height: 500px;
+ }
+
+ #user-video {
+  margin: 3%;
+  border-radius: 30px;
+  width: 900px;
+  height: 500px;
+  z-index: -1;
+ }
