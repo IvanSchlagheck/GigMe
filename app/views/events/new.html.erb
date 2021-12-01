@@ -1,6 +1,14 @@
 
 <%= simple_form_for(@event, method: :post, url: venue_events_path) do |f| %>
+<<<<<<< HEAD
 <%= f.input :start_time, input_html: {id: ''} %>
 <%= f.input :end_time, input_html: {id: ''} %>
 <%= f.button :submit, class: 'create-event-button' %>
+=======
+<%= f.input :start_time %>
+<%= f.input :end_time %>
+<%= f.input :gig_start %>
+<%= f.input :gig_end %>
+<%= f.submit %>
+>>>>>>> 89c60cae3288d35c37ff54dd6d47b45371d72c5a
 <% end %>
