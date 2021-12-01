@@ -3,10 +3,10 @@
     <p><%= booking.user.first_name %></p>
     <p class= "pending-card-date"><%= booking.event.start_time.strftime('%d %b %H:%M') %></p>
   </div>
-  <div class="card-status">
+  <div class="card-status-p">
     <p class= "accept-link"><%= link_to "Accept", booking_confirm_path(booking) %></p>
     <p class= "decline-link"><%= link_to "Decline", booking_decline_path(booking) %></p>
+    <div class="card-green-line-pending"></div>
+    <div class="card-pink-line-pending"></div>
   </div>
-  <div class="card-green-line-pending"></div>
-  <div class="card-pink-line-pending"></div>
 </div>
