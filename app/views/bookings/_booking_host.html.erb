@@ -3,20 +3,20 @@
 <%= @artist.phone_number %>
 <%= @artist.artist_profil.artistname %>
 <%= @artist.artist_profil.genre %>
-<div>
-<% if @artist.artist_profil.youtube %>
-    <%= link_to "Youtube", @artist.artist_profil.youtube, target:"_blank" %>
-<% end %>
+<div style="background-color:white">
+    <% if @artist.artist_profil.youtube %>
+        <%= link_to "", @artist.artist_profil.youtube, target:"_blank", class:"fab fa-youtube", style:"color:black"%>
+    <% end %>
 
-<% if @artist.artist_profil.instagram %>
-    <%= link_to "Instagram", @artist.artist_profil.instagram, target:"_blank" %>
-<% end %>
-<% if @artist.artist_profil.soundcloud %>
-    <%= link_to "Soundcloud", @artist.artist_profil.soundcloud, target:"_blank" %>
-<% end %>
+    <% if @artist.artist_profil.instagram %>
+        <%= link_to "", @artist.artist_profil.instagram, target:"_blank", class:"fab fa-instagram", style:"color:black" %>
+    <% end %>
+    <% if @artist.artist_profil.soundcloud %>
+        <%= link_to "", @artist.artist_profil.soundcloud, target:"_blank", class:"fab fa-soundcloud", style:"color:black" %>
+    <% end %>
 
-<% if @artist.artist_profil.bandcamp %>
-    <%= link_to "Bandcamp", @artist.artist_profil.bandkamp, target:"_blank" %>
-<% end %>
+    <% if @artist.artist_profil.bandcamp %>
+        <%= link_to "", @artist.artist_profil.bandkamp, target:"_blank", class:"fab fa-bandcamp", style:"color:black" %>
+    <% end %>
 </div>
 
