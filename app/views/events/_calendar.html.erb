@@ -2,7 +2,7 @@
   <%= date %>
   <% events.each do |event| %>
     <div class="button-calendar">
-      <button class="event-modal-button search-button" data-buttonId="<%= event.id %>">
+      <button id= "calendar-button" class="event-modal-button search-button" data-buttonId="<%= event.id %>">
         <p id="button-text"><%= event.start_time.strftime('%H:%M') %></p>
       </button>
     </div>

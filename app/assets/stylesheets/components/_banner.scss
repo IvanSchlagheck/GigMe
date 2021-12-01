@@ -9,7 +9,6 @@
   }
 
   .banner h1 {
-    margin: 0;
     color: #ffffff;
     font-family: 'Sora', sans-serif;
     font-size: 70px;
@@ -31,6 +30,8 @@
     font-size: 42px;
     line-height: 49px;
     letter-spacing: -0.05em;
+    margin-bottom: 4%;
+
   }
 
   .banner a {
@@ -52,6 +53,7 @@
   border-radius: 72px;
   background: linear-gradient(115.07deg, rgba(48, 46, 46, 0.25) 1.75%, rgba(229, 0, 164, 0.25) 100%);
   border-radius: 92px;
+  margin-bottom: 3%;
 }
 
 .search-element {
@@ -60,6 +62,7 @@
   flex-direction: column;
   border-right: 1px solid rgba(10,10,10,.1);
   padding: 1em;
+  
 }
 
 .search-label {
@@ -80,6 +83,8 @@
   width: 100%;
   font-size: 1.2em;
   line-height: 1.2em;
+  letter-spacing: -0.05em;
+  font-family: $inter;
   margin-top: 5px;
   background: linear-gradient(115.07deg, rgba(48, 46, 46, 0.25) 1.75%, rgba(229, 0, 164, 0.25) 100%);
   mix-blend-mode: exclusion;
