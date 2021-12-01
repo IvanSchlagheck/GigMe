@@ -4,8 +4,8 @@
     <p><%= booking.event.start_time %> - <%= booking.event.end_time %></p>
   </div>
   <div class="card-status">
-    <p><%= link_to "Accept", booking_confirm(booking) %></p>
-    <p><%= link_to "Decline", booking_decline(booking) %></p>
+    <p><%= link_to "Accept", booking_confirm_path(booking) %></p>
+    <p><%= link_to "Decline", booking_decline_path(booking) %></p>
   </div>
   <div class="card-green-line-pending"></div>
   <div class="card-pink-line-pending"></div>
