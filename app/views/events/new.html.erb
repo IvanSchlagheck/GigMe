@@ -1,6 +1,19 @@
 
-<%= simple_form_for(@event, method: :post, url: venue_events_path) do |f| %>
-<%= f.input :start_time %>
-<%= f.input :end_time %>
-<%= f.submit %>
-<% end %>
+
+<div class="new-event-container">
+  <h1>Create an Event!</h1>
+  <%= simple_form_for(@event, method: :post, url: venue_events_path) do |f| %>
+    <div class="d-flex">
+      <%= f.input :start_time, label: 'Start Date' %>
+      <%= f.input :gig_start, label: 'Start time' %>
+    </div>
+    <div class="d-flex">
+    <%= f.input :end_time, label: 'End Date' %>
+    <%= f.input :gig_end, label: 'End Time' %>
+    </div>
+    <div style="width: 100%; display: flex;">
+      <%= f.button :submit, class: 'create-event-button' %>
+    </div>
+
+  <% end %>
+</div>

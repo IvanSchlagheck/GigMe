@@ -1,0 +1,42 @@
+#text-box-event {
+
+}
+
+#text-box-event-new {
+ color-adjust: white;
+ width: 95%;
+}
+
+#text-box-event-time-new {
+  width: 45%;
+}
+
+.event_start_time {
+  width: 75%;
+}
+
+.event_gig_start {
+  width: 25%;
+}
+
+.event_end_time {
+  width: 75%;
+}
+
+.event_gig_end {
+  width: 25%;
+}
+
+.new-event-container {
+width: 50%;
+margin: auto;
+  h1 {
+    color: white;
+    font-family: $inter;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+// .new-event-form .simple-form .d-flex .form-group:first-child{
+//   width: 75%;
+// }

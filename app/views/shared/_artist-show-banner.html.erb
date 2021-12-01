@@ -3,9 +3,13 @@
     <h1><%= @user.first_name.capitalize %></h1>
     <div class="banner-green-line" data-aos="fade-right" data-aos-duration="1750"></div>
     <h2><%= @user.last_name %></h2>
-    <div class="container">
-      <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill, id: "artist-image" %>
-    </div>
+      <div class="container">
+        <% if @user.photo.attached? %>
+          <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill, id: "artist-image" %>
+        <% else %>
+          <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/4/43/07._Camel_Profile%2C_near_Silverton%2C_NSW%2C_07.07.2007.jpg", height: 300, width: 400, id: "artist-image" %>
+      </div>
+      <% end %>
 
   </div>
 </div>
