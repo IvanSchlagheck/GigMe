@@ -3,53 +3,54 @@
     <h1>Hello <%= current_user.first_name %>!</h1>
     <div class="dashboard-green-line-header"></div>
   </div>
-  <% if current_user.venue %>
-    <%= render "shared/host-dashboard/dashboard-button-create-event" %>
+
+  <div class="host-dashboard-button">
+    <% if current_user.venue %>
+      <%= render "shared/host-dashboard/dashboard-button-create-event" %>
+    <% end %>
+  </div>
+  <% if @host_bookings.pending.size != 0 %>
+    <h3 class= "dashboard-subtitle">Pending Gigs</h3>
+    <div class="dashboard-pink-line-subtitle"></div>
+    <% @host_bookings.pending.each do |booking| %>
+      <%= render "shared/host-dashboard/dashboard-card-pending", booking: booking %>
+    <% end %>
   <% end %>
 
-    <% if @host_bookings.pending.size != 0 %>
-      <h3 class= "dashboard-subtitle">Pending Gigs</h3>
-      <div class="dashboard-pink-line-subtitle"></div>
-      <% @host_bookings.pending.each do |booking| %>
-        <%= render "shared/host-dashboard/dashboard-card-pending", booking: booking %>
-      <% end %>
+  <% if @host_bookings.confirmed.size != 0 %>
+    <h3 class= "dashboard-subtitle">Confirmed Gigs</h3>
+    <div class="dashboard-pink-line-subtitle"></div>
+    <% @host_bookings.confirmed.each do |booking| %>
+      <%= render "shared/host-dashboard/dashboard-card-confirmed", booking: booking %>
     <% end %>
+  <% end %>
 
-    <% if @host_bookings.confirmed.size != 0 %>
-      <h3 class= "dashboard-subtitle">Confirmed Gigs</h3>
-      <div class="dashboard-pink-line-subtitle"></div>
-      <% @host_bookings.confirmed.each do |booking| %>
-        <%= render "shared/host-dashboard/dashboard-card-confirmed", booking: booking %>
-      <% end %>
+  <% if @host_bookings.rejected.size != 0 %>
+    <h3 class= "dashboard-subtitle">Rejected Gigs</h3>
+    <div class="dashboard-pink-line-subtitle"></div>
+    <% @host_bookings.rejected.each do |booking| %>
+      <%= render "shared/host-dashboard/dashboard-card-rejected", booking: booking %>
     <% end %>
+  <% end %>
 
-    <% if @host_bookings.rejected.size != 0 %>
-      <h3 class= "dashboard-subtitle">Rejected Gigs</h3>
-      <div class="dashboard-pink-line-subtitle"></div>
-      <% @host_bookings.rejected.each do |booking| %>
-        <%= render "shared/host-dashboard/dashboard-card-rejected", booking: booking %>
-      <% end %>
+  <% if @host_bookings.past.size != 0 %>
+    <h3 class= "dashboard-subtitle">Past Gigs</h3>
+    <div class="dashboard-pink-line-subtitle"></div>
+    <% @host_bookings.past.each do |booking| %>
+    <%= render "shared/host-dashboard/dashboard-card-past", booking: booking %>
     <% end %>
+  <% end %>
 
-    <% if @host_bookings.past.size != 0 %>
-      <h3 class= "dashboard-subtitle">Past Gigs</h3>
-      <div class="dashboard-pink-line-subtitle"></div>
-      <% @host_bookings.past.each do |booking| %>
-      <%= render "shared/host-dashboard/dashboard-card-past", booking: booking %>
-      <% end %>
+  <% if @host_bookings.messaging.size != 0 %>
+    <h3 class= "dashboard-subtitle">Messaging Giggers</h3>
+    <div class="dashboard-pink-line-subtitle"></div>
+    <% @host_bookings.messaging.each do |booking| %>
+      <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= booking.event.venue.image_url %>)">
+        <p><%= booking.event.venue.name %></p>
+        <p><%= booking.event.venue.address %></p>
+        <p><%= booking.event.start_time %> - <%= booking.event.end_time %></p>
+        <p><%= booking.status %></p>
+      </div>
     <% end %>
-
-    <% if @host_bookings.messaging.size != 0 %>
-      <h3 class= "dashboard-subtitle">Messaging Giggers</h3>
-      <div class="dashboard-pink-line-subtitle"></div>
-      <% @host_bookings.messaging.each do |booking| %>
-        <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= booking.event.venue.image_url %>)">
-          <p><%= booking.event.venue.name %></p>
-          <p><%= booking.event.venue.address %></p>
-          <p><%= booking.event.start_time %> - <%= booking.event.end_time %></p>
-          <p><%= booking.status %></p>
-        </div>
-      <% end %>
-    <% end %>
-
+  <% end %>
 </div>
