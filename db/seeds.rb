@@ -339,6 +339,8 @@ date = Faker::Date.between(from: '2021-12-06', to: '2021-12-10')
 event1 = Event.new(
   start_time: date,
   end_time: date + 1,
+  gig_start: "20:00",
+  gig_end: "20:59",
   venue_id: Venue.all[0].id
 )
 event1.save!
@@ -347,6 +349,8 @@ date2 = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
 event2 = Event.new(
   start_time: date2,
   end_time: date2 + 1,
+  gig_start: "20:00",
+  gig_end: "20:59",
   venue_id: Venue.all[1].id
 )
 event2.save!
@@ -355,6 +359,8 @@ date3 = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
 event3 = Event.new(
   start_time: date3,
   end_time: date3 + 1,
+  gig_start: "21:00",
+  gig_end: "21:59",
   venue_id: Venue.all[1].id
 )
 event3.save!
@@ -363,6 +369,8 @@ date = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
 event4 = Event.new(
   start_time: date,
   end_time: date + 1,
+  gig_start: "22:00",
+  gig_end: "22:59",
   venue_id: Venue.all[1].id
 )
 event4.save!
@@ -370,9 +378,12 @@ puts "Created event4"
 
 30.times do
   date = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
+  start = rand(18..23)
   event = Event.new(
   start_time: date,
   end_time: date + 1,
+  gig_start: "#{start}:00",
+  gig_end: "#{start}:59",
   venue_id: Venue.all.sample.id
 )
 event.save!
