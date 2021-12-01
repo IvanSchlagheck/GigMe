@@ -126,7 +126,7 @@ venue1 = Venue.new(
   name: "Brauhaus Neulich",
   address: "Selchower Str. 20, 12049 Berlin",
   contact_details: "Mail: brauhausneulich@venues.com",
-  user_id: User.all[5].id,
+  user_id: User.all[0].id,
   about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
   requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
@@ -139,7 +139,7 @@ venue2 = Venue.new(
   name: "Fuks Bar",
   address: "Hobrechtstraße 64, 12047 Berlin",
   contact_details: "Mail: fuksbar@venues.com",
-  user_id: User.all[6].id,
+  user_id: User.all[4].id,
   about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
   requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
