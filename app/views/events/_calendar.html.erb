@@ -16,9 +16,7 @@
             <%= @venue.address %>
           </div>
 
-
-          <%= simple_form_for :booking, url: bookings_path do |f| %>
-            <%= f.hidden_field :event, value: event.id %>
+          <%= simple_form_for :booking, url: event_bookings_path(event) do |f| %>
 
 
             <%= f.input :content, label: false, as: :text, input_html: {id: 'text-box'}, placeholder: "Type a message here..." %>
