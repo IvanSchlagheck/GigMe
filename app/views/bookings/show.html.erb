@@ -25,6 +25,8 @@
 <% if current_user.status == 'host' %>
   <%= render 'booking_host' %>
 <% else %>
-  <%= render 'booking_artist' %>
+  <%= link_to venue_path(@venue) do %>
+    <%= render 'booking_artist' %>
+  <% end %>
 <% end %>
 </div>

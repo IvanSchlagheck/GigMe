@@ -68,3 +68,20 @@ color: white;
   font-family: $inter;
   letter-spacing: -0.05em;
 }
+
+.create-event-button {
+  background-color: #E500A4;
+  color: white;
+  font-size: large;
+  border-radius: 50px;
+  opacity: 1;
+  position: relative;
+  font-family: $inter;
+  letter-spacing: -0.05em;
+  margin: 50px auto 20px auto;
+}
+
+.create-event-button:hover {
+  color: white;
+  background-color: $green;
+}
