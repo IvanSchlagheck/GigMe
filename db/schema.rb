@@ -60,8 +60,10 @@ ActiveRecord::Schema.define(version: 2021_11_30_083749) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.date "start_time"
+    t.date "end_time"
+    t.time "gig_start"
+    t.time "gig_end"
     t.bigint "venue_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
