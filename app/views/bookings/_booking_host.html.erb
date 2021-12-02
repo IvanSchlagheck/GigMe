@@ -1,41 +1,8 @@
-<%= @artist.username %>
-<p><%= @artist.first_name %> <%= @artist.last_name %></p>
-<%= @artist.phone_number %>
-<%= @artist.artist_profil.artistname %>
-<%= @artist.artist_profil.genre %>
-<div style="background-color:white">
-    <% if @artist.artist_profil.youtube %>
-        <%= link_to "", @artist.artist_profil.youtube, target:"_blank", class:"fab fa-youtube", style:"color:black"%>
-    <% end %>
-
-    <% if @artist.artist_profil.instagram %>
-        <%= link_to "", @artist.artist_profil.instagram, target:"_blank", class:"fab fa-instagram", style:"color:black" %>
-    <% end %>
-    <% if @artist.artist_profil.soundcloud %>
-        <%= link_to "", @artist.artist_profil.soundcloud, target:"_blank", class:"fab fa-soundcloud", style:"color:black" %>
-    <% end %>
-
-    <% if @artist.artist_profil.bandcamp %>
-        <%= link_to "", @artist.artist_profil.bandkamp, target:"_blank", class:"fab fa-bandcamp", style:"color:black" %>
-    <% end %>
-</div>
-
-
-
 <%= render 'shared/banner-bookings', booking: @booking %>
 
-<div class="d-flex space-between align-items-center">
-    <div class="container">
-      <div class="cards-bookings">
-        <% @venues.first(3).each do |venue| %>
-          <%= link_to venue_path(venue) do %>
-            <%= render "shared/card-home", venue: venue %>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="container">
+<div class="">
+    <div class="container" style= "height: 630px; position: relative;">
+      <%= render "bookings/chat" %>
       <div class="messager">
         <%= simple_form_for [@booking, @message], remote: true do |f| %>
           <%= f.input :content, label: false, placeholder: "Your Message..." %>
@@ -43,7 +10,6 @@
         <% end %>
       </div>
     </div>
-  </div>
 
   <div class="textaboutgiggers">
     <h1><%= @artist.first_name %><%= @artist.last_name %><br>is excited <br>to gig with you!</h1>
@@ -51,6 +17,4 @@
      <div class="card-green-line-booking" data-aos="fade-left" data-aos-duration="1500"></div>
      <div class="card-pink-line2-booking" data-aos="fade-right" data-aos-duration="1500"></div>
   </div>
-
 </div>
-r
