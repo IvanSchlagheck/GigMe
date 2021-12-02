@@ -4,6 +4,10 @@
       <h1><%= @venue.name %></h1>
       <h2><%= @venue.address %></h2>
     </div>
-    <div class="banner-green-line" data-aos="fade-right" data-aos-duration="1750"></div>
+    <% if params[:start_date].present? %>
+      <div class="banner-green-line"></div>
+    <% else %>
+      <div class="banner-green-line" data-aos="fade-right" data-aos-duration="1750"></div>
+    <% end %>
   </div>
 <% end %>

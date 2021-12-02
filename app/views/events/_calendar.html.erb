@@ -1,20 +1,21 @@
-<%= week_calendar(events: @events, attribute: :start_time, end_attribute: :end_time, previous_link: events_ajax_previous_link, next_link: events_ajax_next_link) do |date, events| %>
-  <%= date %>
-  <% events.each do |event| %>
-    <div class="button-calendar">
-      <button id= "calendar-button" class="event-modal-button search-button" data-buttonId="<%= event.id %>">
-        <p id="button-text"><%= event.gig_start.strftime('%H:%M') %> - <%= event.gig_end.strftime('%H:%M') %></p>
-      </button>
-    </div>
-    <div class="event-modal" id="event-modal-<%= event.id %>">
-      <div class="event-modal-content">
-        <div class="popup-text">
-        <div class="card-green-line-popup"></div>
-        <span class="event-modal-close" id="event-modal-close-<%= event.id %>">&times;</span>
-            <%=  @venue.name %>
-            <br>
-            <%= @venue.address %>
-          </div>
+<%= turbo_frame_tag 'calendar' do %>
+  <%= week_calendar(events: @events, attribute: :start_time, end_attribute: :end_time, previous_link: events_ajax_previous_link, next_link: events_ajax_next_link) do |date, events| %>
+    <%= date %>
+    <% events.each do |event| %>
+      <div class="button-calendar">
+        <button id= "calendar-button" class="event-modal-button search-button" data-buttonId="<%= event.id %>">
+          <p id="button-text"><%= event.gig_start.strftime('%H:%M') %> - <%= event.gig_end.strftime('%H:%M') %></p>
+        </button>
+      </div>
+      <div class="event-modal" id="event-modal-<%= event.id %>">
+        <div class="event-modal-content">
+          <div class="popup-text">
+          <div class="card-green-line-popup"></div>
+          <span class="event-modal-close" id="event-modal-close-<%= event.id %>">&times;</span>
+              <%=  @venue.name %>
+              <br>
+              <%= @venue.address %>
+            </div>
 
             <%= simple_form_for :booking, url: event_bookings_path(event) do |f| %>
 
@@ -23,8 +24,9 @@
             <%= f.button :submit, label: 'Book!', class: 'submit-button'%>
           <% end %>
 
+          </div>
         </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 <% end %>
