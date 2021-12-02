@@ -1,4 +1,5 @@
 import Typed from 'typed.js';
+const startTyped = () => {
   const subtitle = document.querySelector(".subtitle-banner")
   if (subtitle) {
     const typed = new Typed('.subtitle-banner', {
@@ -15,3 +16,6 @@ import Typed from 'typed.js';
       stringsElement: null,
       });
   };
+}
+
+export { startTyped }
