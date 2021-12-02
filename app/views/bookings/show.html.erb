@@ -13,6 +13,7 @@
     </div>
 
     <div class="container">
+      <%= render "bookings/chat" %>
       <div class="messager">
         <%= simple_form_for [@booking, @message], remote: true do |f| %>
           <%= f.input :content, label: false, placeholder: "Your Message..." %>
