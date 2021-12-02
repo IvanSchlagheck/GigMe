@@ -31,10 +31,9 @@
   justify-content: center;
   button {
     #button-text {
-      padding-top: 20%;
-      margin-bottom: 1rem;
-      padding-left: 20%;
+
       font-family: $sora;
+      margin: 0 auto;
     }
   }
   button:hover {
@@ -45,8 +44,9 @@
 }
 
 #calendar-button {
-  width: 5em;
-  height: 9em;
+  width: 72%;
+    height: 4em;
+    font-size: x-small;
 }
 
 
@@ -75,4 +75,3 @@
 .btn-outline-pink:hover {
   color: rgb(180, 176, 176);
 }
-
