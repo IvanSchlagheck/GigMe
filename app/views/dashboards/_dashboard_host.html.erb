@@ -2,7 +2,7 @@
   <div class="dashboard-head-text">
     <h1>Hello <%= current_user.first_name %>!</h1>
     <div class="dashboard-green-line-header"></div>
-    <h1 style="margin-top:-10vh"><%= current_user.venue.name %></h1>
+    <h1 style="margin-top:-10vh"><%= link_to "#{current_user.venue.name}", venue_path(current_user.venue) %></h1>
   </div>
 
   <div class="host-dashboard-button">
