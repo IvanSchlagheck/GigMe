@@ -1,17 +1,66 @@
-<div class="new-event-container">
+<!-- <div class="row py-3 new-event-container">
   <h1>Create an Event!</h1>
   <%= simple_form_for(@event, method: :post, url: venue_events_path) do |f| %>
     <div class="d-flex">
-      <%= f.input :start_time, label: 'Start Date' %>
-      <%= f.input :gig_start, label: 'Start time' %>
+      <%= f.input :start_time, label: 'Start Date', class: 'flatpickr js-flatpickr-date' %>
+      <%= f.input :gig_start, label: 'Start time', class: 'flatpickr js-flatpickr-time' %>
     </div>
     <div class="d-flex">
-    <%= f.input :end_time, label: 'End Date' %>
-    <%= f.input :gig_end, label: 'End Time' %>
+    <%= f.input :end_time, label: 'End Date', class: 'flatpickr js-flatpickr-date' %>
+    <%= f.input :gig_end, label: 'End Time', class: 'flatpickr js-flatpickr-time' %>
     </div>
     <div style="width: 100%; display: flex;">
       <%= f.button :submit, class: 'create-event-button' %>
     </div>
+  <% end %>
+</div> -->
 
+<div class="row py-3 new-event-container">
+  <h1>Create an Event!</h1>
+  <%= form_for(@event, url: venue_events_path) do |f| %>
+    <div class="d-flex">
+      <%= f.label :start_time %>
+      <%= f.text_field :start_time, class: 'flatpickr js-flatpickr-date' %>
+      <%= f.label :gig_start %>
+      <%= f.text_field :gig_start, class: 'flatpickr js-flatpickr-time' %>
+    </div>
+    <div class="d-flex">
+      <%= f.label :end_time %>
+      <%= f.text_field :end_time, class: 'flatpickr js-flatpickr-date' %>
+      <%= f.label :gig_end %>
+      <%= f.text_field :gig_end, class: 'flatpickr js-flatpickr-time' %>
+    </div>
+    <div style="width: 100%; display: flex;">
+      <%= f.submit class: 'create-event-button' %>
+    </div>
   <% end %>
 </div>
+
+<!-- <%= form_for(@event, url: venue_events_path) do |f| %>
+  <%= f.label :start_time %>
+  <%= f.text_field :start_time, class: 'flatpickr js-flatpickr-date' %>
+  <%= f.label :gig_start %>
+  <%= f.text_field :gig_start, class: 'flatpickr js-flatpickr-time' %>
+  <%= f.label :end_time %>
+  <%= f.text_field :end_time, class: 'flatpickr js-flatpickr-date' %>
+  <%= f.label :gig_end %>
+  <%= f.text_field :gig_end, class: 'flatpickr js-flatpickr-time' %>
+  <%= f.submit class: 'create-event-button' %>
+<% end %> -->
+
+
+<!-- <div class="row py-3 new-event-container">
+  <form action="/venues/<%= current_user.venue.id %>/events" method="post">
+    <div class="d-flex">
+      <input type="text" name="start_time" class="flatpickr js-flatpickr-date" placeholder="select date">
+      <input type="text" name="gig_start" class="flatpickr js-flatpickr-time" placeholder="select time">
+    </div>
+    <div class="d-flex">
+      <input type="text" name="end_time" class="flatpickr js-flatpickr-date" placeholder="select date">
+      <input type="text" name="gig_end" class="flatpickr js-flatpickr-time" placeholder="select time">
+    </div>
+    <div class="input-group-append">
+        <input type="submit" value="Create Event" class="create-event-button">
+      </div>
+  </form>
+</div> -->

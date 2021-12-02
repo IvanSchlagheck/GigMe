@@ -126,7 +126,7 @@ venue1 = Venue.new(
   name: "Brauhaus Neulich",
   address: "Selchower Str. 20, 12049 Berlin",
   contact_details: "Mail: brauhausneulich@venues.com",
-  user_id: User.all[0].id,
+  user_id: User.first.id,
   about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
   requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
 )
