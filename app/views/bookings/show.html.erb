@@ -1,9 +1,11 @@
-
+<div>
+</div>
 
 
 <div class="card-pink-line-home1" style="color:white; top:15%; margin-left:5%; z-index:1">
 <h1>Your Booking</h1>
 <%= @booking.event.start_time %>
+-
 <%= @booking.event.end_time %>
 </div>
 <div class="chatroom card" style="margin-left:5%; margin-top:10%">
@@ -14,11 +16,11 @@
     <% @booking.messages.each do |message| %>
       <%= render "messages/message", message: message %>
     <% end %>
-    
+
   </div>
     <%= simple_form_for [@booking, @message], remote: true do |f| %>
-      <%= f.input :content, label: false, placeholder: "#Your Message#" %>
-      <%= f.submit "send" %>
+      <%= f.input :content, label: false, input_html: { id: "message-bar" }, placeholder: "Your Message..." %>
+      <%= f.submit "Send", id: "message-button"%>
     <% end %>
 </div>
 <div style="background-color:white;">
