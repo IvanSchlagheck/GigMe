@@ -23,11 +23,11 @@ puts 'Creating users...'
 
 file = URI.open('https://image.gala.de/22313448/t/EN/v3/w1440/r1/-/rihanna.jpg')
 marc = User.new(
-  username: 'marc',
-  email: 'marc@gigme.com',
+  username: 'Amelie',
+  email: 'amelie@gigme.com',
   password: '12345678',
-  first_name: 'Marc',
-  last_name: 'Rodenbusch',
+  first_name: 'Amelie',
+  last_name: 'Darenberg',
   phone_number: '015736589485',
   status: "host",
 )
@@ -65,11 +65,11 @@ puts "created user #{damian.username}"
 
 file = URI.open('https://www.tierchenwelt.de/images/stories/fotos/saeugetiere/beuteltiere/quokka/quokka_happy_l.jpg')
 amelie = User.new(
-  username: 'amelie',
-  email: 'amelie@gigme.com',
+  username: 'marc',
+  email: 'marc@gigme.com',
   password: '12345678',
-  first_name: 'Amelie',
-  last_name: "D'arenberg",
+  first_name: 'Marc',
+  last_name: "Rodenbusch",
   phone_number: '0123456789',
   status: "artist",
 )
@@ -121,11 +121,11 @@ puts 'Creating venues...'
 
 
 
-file1 = URI.open('https://lh5.googleusercontent.com/p/AF1QipPLEIZw135hjAcoCJPiXOmcWUXiuxKRXC8y-bDD=w1080-k-no')
+file1 = URI.open('https://setoftheday.com/wp-content/gallery/birgit-bier/ev_hdD48OiM30ubrPAC-EshtA-920_lg.jpg')
 venue1 = Venue.new(
-  name: "Brauhaus Neulich",
-  address: "Selchower Str. 20, 12049 Berlin",
-  contact_details: "Mail: brauhausneulich@venues.com",
+  name: "Birgit and Bier",
+  address: "Schleusenufer 3, 10997 Berlin",
+  contact_details: "Mail: birgitandbier@venues.com",
   user_id: User.first.id,
   about: "The bar opened in 1987 and has since grown into a convivial and musical place where many young musicians have launched their careers",
   requirements: "We have all the sound equipement but bring your instrument (we have a piano!)"
