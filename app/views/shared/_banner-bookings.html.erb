@@ -1,11 +1,7 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1579125305607-15279d30d370?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);">
-
-  <div class="container">
-    <h1 class= "booking-banner">Upcoming Gig!</h1>
-    <div class="banner-green-line"></div>
-    <h2 class= "booking-banner"><%= booking.event.start_time %> - <%= booking.event.gig_start %></h2>
+  <div class="container booking-banner">
+    <h1>Upcoming Gig!</h1>
+    <div class="booking-banner-pink-line"></div>
+    <h2><%= booking.event.start_time.strftime('%d %b') %> - <%= booking.event.gig_start.strftime('%H:%Mhs') %></h2>
   </div>
 </div>
-<script>
- 
-</script>

@@ -1,4 +1,5 @@
 .booking-banner {
+  position: relative;
   h1 {
     color: #ffffff;
     font-family: 'Sora', sans-serif;
@@ -11,6 +12,7 @@
     position: absolute;
     letter-spacing: -0.05em;
     z-index: 2;
+    left: -12%;
   }
 
   h2 {
@@ -18,23 +20,23 @@
     color: #ffffff;
     opacity: .7;
     font-family: 'Inter', sans-serif;
-    text-shadow: 1px 1px 3px rgb(0 0 0 / 20%);
     font-weight: 500;
     font-size: 42px;
     line-height: 49px;
     letter-spacing: -0.05em;
     margin-bottom: 4%;
     position: absolute;
-    top: 45%;
+    top: 3170%;
     left: 20%;
   }
-}
 
-.banner-green-line {
-  width: 59%;
-  position: absolute;
-  height: 22px;
-  background-color: #25CED1;
-  top: 41%;
-  left: 0%;
+  .booking-banner-pink-line {
+    width: 85%;
+    position: absolute;
+    height: 22px;
+    background-color: $pink;
+    top: 2381%;
+    left: -34%;
+    z-index: 0;
+  }
 }
