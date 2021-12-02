@@ -1,35 +1,5 @@
-<%= render 'shared/banner-bookings', booking: @booking %>
-</div>
-
-<div class="d-flex space-between align-items-center">
-    <div class="container">
-      <div class="cards-bookings">
-        <% @venues.first(3).each do |venue| %>
-          <%= link_to venue_path(venue) do %>
-            <%= render "shared/card-home", venue: venue %>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="messager">
-        <%= simple_form_for [@booking, @message], remote: true do |f| %>
-          <%= f.input :content, label: false, placeholder: "Your Message..." %>
-          <%= f.button :submit, "Send", class: 'message-button' %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="textaboutgiggers">
-    <h1><%= @venue.name %><br>is excited <br>to gig with you!</h1>
-     <div class="card-pink-line1-booking" data-aos="fade-right" data-aos-duration="1500"></div>
-     <div class="card-green-line-booking" data-aos="fade-left" data-aos-duration="1500"></div>
-     <div class="card-pink-line2-booking" data-aos="fade-right" data-aos-duration="1500"></div>
-  </div>
-
-
-
-</div>
+<% if current_user.status == 'host' %>
+  <%= render 'booking_host' %>
+<% else %>
+  <%= render 'booking_artist' %>
+<% end %>
