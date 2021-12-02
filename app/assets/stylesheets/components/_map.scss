@@ -5,6 +5,7 @@
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+  border-radius: 10px;
 }
 
 .mapboxgl-ctrl-geocoder--input {
@@ -14,12 +15,16 @@
   height: calc(1.5em + 0.75rem + 2px);
 }
 
-#map {
+#map-venue-index {
   width: 50%;
-  height: 100vh;
-  position: sticky;
-  top: 0;
+  height: 50vh;
+}
 
+#info-design {
+  a {
+    color: black;
+    outline: none;
+  }
 }
 
 .venue_address {
