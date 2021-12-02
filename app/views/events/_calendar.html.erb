@@ -3,9 +3,11 @@
     <%= date %>
     <% events.each do |event| %>
       <div class="button-calendar">
-        <button id= "calendar-button" class="event-modal-button search-button" data-buttonId="<%= event.id %>">
+        <div>
+        <button id= "calendar-button" class="event-modal-button search-button" data-buttonId="<%= event.id %>" >
           <p id="button-text"><%= event.gig_start.strftime('%H:%M') %> - <%= event.gig_end.strftime('%H:%M') %></p>
         </button>
+        </div>
       </div>
       <div class="event-modal" id="event-modal-<%= event.id %>">
         <div class="event-modal-content">
