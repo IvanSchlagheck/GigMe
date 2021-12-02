@@ -39,6 +39,8 @@
     font-family: $inter;
     text-align: center;
     margin-bottom: 60px;
+    letter-spacing: -0.05em;
+    z-index: 10;
   }
 }
 // .new-event-form .simple-form .d-flex .form-group:first-child{
@@ -46,9 +48,30 @@
 // }
 .time-info {
 color: white;
-
+font: $inter;
+letter-spacing: -0.05em;
 }
 
 .text-stuff {
  margin-left: 20%;
+}
+
+.card-pink-line-newevent {
+  background-color: $green;
+  position: absolute;
+  margin-top: 3%;
+  margin-left: -50%;
+  width: 925px;
+  height: 10px;
+  z-index: 9;
+}
+
+.card-green-line-newevent {
+  background-color: $green;
+  position: absolute;
+  margin-top: 4%;
+  margin-left: 56%;
+  width: 952px;
+  height: 10px;
+  z-index: 9;
 }
