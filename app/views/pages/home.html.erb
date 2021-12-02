@@ -1,5 +1,6 @@
 <div class="navbar" id="homenavbar">
-  <div class="d-flex justify-content-between">
+  <div></div> <%# <-----Do NOT DELETE THIS EMPTY DIV; IT KEEPS THE NAV BAR BUTTONS ON THE RIGHT  %>
+  <div class="d-flex space-between">
     <div class="navbar-items">
       <% unless current_user %>
         <%= link_to "Login", new_user_session_path, class: "signuplogin" %>

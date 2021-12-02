@@ -19,6 +19,7 @@
   height: 100vh;
   position: sticky;
   top: 0;
+
 }
 
 .venue_address {
@@ -37,4 +38,8 @@
   button {
     display: none;
   }
+}
+
+.container .mapboxgl-ctrl-geocoder {
+  float: right;
 }
