@@ -17,24 +17,26 @@
 
 <div class="py-3 new-event-container">
   <h1>Create an Event!</h1>
+  <div class="card-pink-line-newevent" data-aos="fade-right" data-aos-duration="1500"></div>
+
   <%= form_for(@event, url: venue_events_path) do |f| %>
-    <div class="d-flex">
+    <div class="d-flex my-3">
       <div class="mr-5">
-        <%= f.label :start_time, 'Start date', class: "time-info" %>
+        <%= f.label :start_time, 'Start date:', class: "time-info" %>
         <%= f.text_field :start_time, class: 'flatpickr js-flatpickr-date', id: "text-stuff" %>
       </div>
       <div>
-        <%= f.label :gig_start, class: "time-info" %>
+        <%= f.label :gig_start, 'Start time:', class: "time-info" %>
         <%= f.text_field :gig_start, class: 'flatpickr js-flatpickr-time', id: "text-stuff" %>
         </div>
     </div>
     <div class="d-flex">
       <div class="mr-5">
-        <%= f.label :end_time, class: "time-info" %>
+        <%= f.label :end_time, 'End date:', class: "time-info" %>
         <%= f.text_field :end_time, class: 'flatpickr js-flatpickr-date', id: "text-stuff" %>
       </div>
       <div>
-        <%= f.label :gig_end, class: "time-info" %>
+        <%= f.label :gig_end, 'End time:', class: "time-info" %>
         <%= f.text_field :gig_end, class: 'flatpickr js-flatpickr-time', id: "text-stuff" %>
       </div>
     </div>
@@ -73,3 +75,4 @@
       </div>
   </form>
 </div> -->
+g
