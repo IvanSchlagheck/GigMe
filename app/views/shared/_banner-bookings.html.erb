@@ -2,6 +2,11 @@
   <div class="container booking-banner">
     <h1>Upcoming Gig!</h1>
     <div class="booking-banner-pink-line"></div>
-    <h2><%= booking.event.start_time.strftime('%d %b') %> - <%= booking.event.gig_start.strftime('%H:%Mhs') %></h2>
+    <% if current_user.status == 'host' %>
+      <h2 id= "h22" ><%= booking.event.start_time.strftime('%d %b') %> - <%= booking.event.gig_start.strftime('%H:%Mhs') %></h2>
+    <% else %>
+      <h2 id= "h21"> <%= booking.event.venue.name %> <%= booking.event.venue.address %> </h2>
+      <h2 id= "h22" ><%= booking.event.start_time.strftime('%d %b') %> - <%= booking.event.gig_start.strftime('%H:%Mhs') %></h2>
+    <% end %>
   </div>
 </div>
