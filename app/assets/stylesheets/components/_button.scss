@@ -86,7 +86,7 @@ color: white;
   background-color: $green;
 }
 
-#message-button {
+.message-button {
   background-color: #E500A4;
   color: white;
   font-size: large;
@@ -98,5 +98,10 @@ color: white;
   font-family: $inter;
   letter-spacing: -0.05em;
   width: 80px;
-  margin: 50px auto 20px auto;
+  float: right;
+}
+
+.message-button:hover {
+  color: white;
+  background-color: $green;
 }
