@@ -20,9 +20,9 @@
             <%= simple_form_for :booking, url: event_bookings_path(event) do |f| %>
 
 
-              <%= f.input :content, label: false, as: :text, input_html: {id: 'text-box-event'}, placeholder: "Type a message here..." %>
-              <%= f.button :submit, class: 'submit-button'%>
-            <% end %>
+            <%= f.input :content, label: false, as: :text, input_html: {id: 'text-box-event'}, placeholder: "Type a message here..." %>
+            <%= f.button :submit, label: 'Book!', class: 'submit-button'%>
+          <% end %>
 
           </div>
         </div>

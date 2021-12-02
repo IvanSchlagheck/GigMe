@@ -85,3 +85,18 @@ color: white;
   color: white;
   background-color: $green;
 }
+
+#message-button {
+  background-color: #E500A4;
+  color: white;
+  font-size: large;
+  border-radius: 50px;
+  opacity: 1;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: $inter;
+  letter-spacing: -0.05em;
+  width: 80px;
+  margin: 50px auto 20px auto;
+}
