@@ -20,3 +20,12 @@ import "controllers"
 import "bootstrap"
 import  "./popup"
 import "./typed"
+
+import flatpickr from "flatpickr";
+import { flatpickerStart } from "../controllers/flatpickr"
+import { startTyped	} from "./typed"
+
+document.addEventListener('turbolinks:load', () => {
+    flatpickerStart()
+    startTyped()
+})

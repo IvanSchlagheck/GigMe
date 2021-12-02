@@ -1,18 +1,21 @@
 import flatpickr from "flatpickr";
-
+const flatpickerStart = () => {
 // date
-flatpickr('.flatpickr.js-flatpickr-date',{
-  altInput: true,
-  altFormat: 'd. M Y',
-  dateFormat: 'Y-m-d'
-});
+  flatpickr('.flatpickr.js-flatpickr-date',{
+    altInput: true,
+    altFormat: 'd. M Y',
+    dateFormat: 'Y-m-d'
+  });
 
 // time
-flatpickr('.flatpickr.js-flatpickr-time',{
-  enableTime: true,
-  time_24hr: true,
-  altInput: true,
-  altFormat: 'H:i',
-  dateFormat: 'H:i',
-  noCalendar: true
-});
+  flatpickr('.flatpickr.js-flatpickr-time',{
+    enableTime: true,
+    time_24hr: true,
+    altInput: true,
+    altFormat: 'H:i',
+    dateFormat: 'H:i',
+    noCalendar: true
+  });
+}
+
+export { flatpickerStart }
