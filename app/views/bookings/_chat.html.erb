@@ -1,7 +1,7 @@
-<div style="background-color:grey;"
+<div style="background-color:grey; border-radius: 36px; margin: 50px auto;"
   data-controller="booking-subscription"
   data-booking-subscription-booking-id-value="<%= @booking.id %>"
-  class="scroller">
+  class="scroller" style= "border-radius: 29%;">
   <% @booking.messages.each do |message| %>
       <%= render "messages/message", message: message %>
   <% end %>
