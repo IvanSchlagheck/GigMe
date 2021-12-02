@@ -10,7 +10,8 @@ class MessagesController < ApplicationController
         @booking,
         render_to_string(partial: "message", locals: {message: @message})
       )
-      redirect_to booking_path(@booking)
+      redirect_to booking_path(@booking,
+        anchor: "anchor")
     else
       render "bookings/show"
     end
