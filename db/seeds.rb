@@ -335,27 +335,26 @@ puts "Creating venues finished!"
 
 puts 'Creating events...'
 
-date = Faker::Date.between(from: '2021-12-06', to: '2021-12-10')
 event1 = Event.new(
-  start_time: date,
-  end_time: date + 1,
+  start_time: '2021-11-27',
+  end_time: '2021-11-27',
   gig_start: "20:00",
-  gig_end: "20:59",
+  gig_end: "21:00",
   venue_id: Venue.all[0].id
 )
 event1.save!
 puts "Created event1"
-date2 = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
+date2 = Faker::Date.between(from: '2021-12-23', to: '2023-09-25')
 event2 = Event.new(
-  start_time: date2,
-  end_time: date2 + 1,
-  gig_start: "20:00",
-  gig_end: "20:59",
-  venue_id: Venue.all[1].id
+  start_time: '2021-11-25',
+  end_time: '2021-11-25',
+  gig_start: "22:00",
+  gig_end: "23:00",
+  venue_id: Venue.all[0].id
 )
 event2.save!
 puts "Created event2"
-date3 = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
+date3 = Faker::Date.between(from: '2021-12-23', to: '2023-09-25')
 event3 = Event.new(
   start_time: date3,
   end_time: date3 + 1,
@@ -365,7 +364,7 @@ event3 = Event.new(
 )
 event3.save!
 puts "Created event3"
-date = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
+date = Faker::Date.between(from: '2021-12-23', to: '2023-09-25')
 event4 = Event.new(
   start_time: date,
   end_time: date + 1,
@@ -377,7 +376,7 @@ event4.save!
 puts "Created event4"
 
 30.times do
-  date = Faker::Date.between(from: '2021-11-23', to: '2023-09-25')
+  date = Faker::Date.between(from: '2021-12-23', to: '2023-09-25')
   start = rand(18..23)
   event = Event.new(
   start_time: date,
@@ -396,17 +395,17 @@ puts "Creating events finished!"
 puts 'Creating bookings...'
 
 booking1 = Booking.new(
-  status: 0,
-  user_id: User.all[2].id,
-  event_id: Event.all[1].id
+  status: 2,
+  user_id: User.all[1].id,
+  event_id: Event.all[0].id
 )
 booking1.save!
 puts "Created booking1"
 
 booking2 = Booking.new(
-  status: 1,
+  status: 3,
   user_id: User.all[2].id,
-  event_id: Event.all[2].id
+  event_id: Event.all[1].id
 )
 booking2.save!
 puts "Created booking2"
