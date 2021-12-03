@@ -7,7 +7,7 @@
         <% if @user.photo.attached? %>
           <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill, id: "artist-image" %>
         <% else %>
-          <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/4/43/07._Camel_Profile%2C_near_Silverton%2C_NSW%2C_07.07.2007.jpg", height: 300, width: 400, id: "artist-image" %>
+          <%= image_tag "https://images.squarespace-cdn.com/content/v1/5c660a39840b16cf85809e3c/1550477236066-402F5IENAONEA2DJIVWM/Fossicks2.jpg", height: 300, width: 400, id: "artist-image" %>
       </div>
       <% end %>
 
