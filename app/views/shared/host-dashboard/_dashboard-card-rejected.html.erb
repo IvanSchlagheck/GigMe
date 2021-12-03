@@ -1,7 +1,7 @@
 <div class="card-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path booking.user.photo.key if booking.user.photo.attached?  %>)">
   <div class="card-text">
     <p><%= link_to "#{booking.user.first_name}", user_path(booking.user) %></p>
-    <p><%= booking.event.start_time.strftime('%d %b %H:%M') %></p>
+    <p><%= booking.event.start_time.strftime('%d %b') %> - <%= booking.event.gig_start.strftime('%H:%M')  %>  </p>
     <p><%= link_to "Booking Details", booking_path(booking) %></p>
   </div>
   <div class="card-status">
