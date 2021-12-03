@@ -21,7 +21,7 @@ User.destroy_all
 
 puts 'Creating users...'
 
-file = URI.open('https://image.gala.de/22313448/t/EN/v3/w1440/r1/-/rihanna.jpg')
+file = URI.open('https://upload.wikimedia.org/wikipedia/commons/4/40/Angus_%26_Julia_Stone_%40_Sir_Stewart_Bovell_Park_%281_1_2011%29_%285356668456%29.jpg')
 marc = User.new(
   username: 'Amelie',
   email: 'amelie@gigme.com',
@@ -35,7 +35,7 @@ marc.photo.attach(io: file, filename: 'marc.png', content_type: 'image/png')
 marc.save!
 puts "created user #{marc.username}"
 
-file = URI.open('https://i.scdn.co/image/ab6761610000e5eba225fabac2fa170e58d68c34')
+file = URI.open('https://hrmasia.com/wp-content/uploads/2019/10/55193977_l.jpg')
 ivan = User.new(
   username: 'ivan',
   email: 'ivan@gigme.com',
@@ -49,7 +49,7 @@ ivan.photo.attach(io: file, filename: 'ivan.png', content_type: 'image/png')
 ivan.save!
 puts "created user #{ivan.username}"
 
-file = URI.open('https://www.ndr.de/media/michael262_v-quadratxl.jpg')
+file = URI.open('https://mixdownmag.com.au/wp-content/uploads/2020/12/mixdown-magazine-a-gig-you-say.jpg')
 damian = User.new(
   username: 'damian',
   email: 'damian@gigme.com',
@@ -63,7 +63,7 @@ damian.photo.attach(io: file, filename: 'damian.png', content_type: 'image/png')
 damian.save!
 puts "created user #{damian.username}"
 
-file = URI.open('https://www.tierchenwelt.de/images/stories/fotos/saeugetiere/beuteltiere/quokka/quokka_happy_l.jpg')
+file = URI.open('https://blog.gigmit.com/wp-content/uploads/2020/02/blog.gigmit_organize-own-gigs_neonbrand_unsplash_1200x627.jpg')
 amelie = User.new(
   username: 'marc',
   email: 'marc@gigme.com',
@@ -77,7 +77,7 @@ amelie.photo.attach(io: file, filename: 'amelie.png', content_type: 'image/png')
 amelie.save!
 puts "created user #{amelie.username}"
 
-file = URI.open('https://image.gala.de/22543710/t/MS/v8/w960/r0.6667/-/beauty-geheimnisse-beyonce.jpg')
+file = URI.open('https://blog.gigmit.com/wp-content/uploads/2020/02/blog.gigmit_organize-own-gigs_neonbrand_unsplash_1200x627.jpg')
 santi = User.new(
   username: 'santi',
   email: 'santi@gigme.com',
