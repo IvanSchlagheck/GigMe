@@ -1,8 +1,10 @@
 <% if @venue.photo.attached? %>
   <div class="banner-show" style= "background-image: url('<%= cl_image_path @venue.photo.key %>');">
-    <div class="container banner-text my-5">
-      <h1><%= @venue.name %></h1>
-      <h2><%= @venue.address %></h2>
+    <div class="linear-banner" style= "">
+      <div class="container banner-text my-5">
+        <h1><%= @venue.name %></h1>
+        <h2><%= @venue.address %></h2>
+      </div>
     </div>
     <% if params[:start_date].present? %>
       <div class="banner-green-line"></div>
