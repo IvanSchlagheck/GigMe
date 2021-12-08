@@ -6,5 +6,6 @@ class BookingChannel < ApplicationCable::Channel
 
   def unsubscribed
     # Any cleanup needed when channel is unsubscribed
+    # just another comment
   end
 end
